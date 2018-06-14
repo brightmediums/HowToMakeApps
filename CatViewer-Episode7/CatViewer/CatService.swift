@@ -33,9 +33,7 @@ class CatService: NSObject {
                 self.parseJSON(jsonFile: jsonFileURL)
             }else { //failure
                 print("Error downloading cat URL")
-            }
-            DispatchQueue.main.async {
-                
+                self.handleCompletionBlock(image: nil)
             }
         }
         task.resume()
