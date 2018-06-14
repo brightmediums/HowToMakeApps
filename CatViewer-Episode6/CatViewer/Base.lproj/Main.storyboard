@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-xJ-mo0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="20" width="187.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="PWt-CF-pCL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="🐈"/>
+                                <state key="normal" title="🦊"/>
                                 <connections>
-                                    <action selector="didTapRefreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Xz-x0-phg"/>
+                                    <action selector="didTapFoxButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQY-bL-OOD"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFC-eF-iUo">
@@ -34,26 +35,43 @@
                             </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="UgA-dl-a1b">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN6-vw-Do0">
+                                <rect key="frame" x="187.5" y="20" width="187.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bZj-bY-mZw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="😸"/>
+                                <connections>
+                                    <action selector="didTapCatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LzU-hP-NCr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="L3n-xJ-mo0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5o9-UW-cAH"/>
                             <constraint firstItem="UgA-dl-a1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6dQ-s5-qeo"/>
+                            <constraint firstItem="aFC-eF-iUo" firstAttribute="top" secondItem="QN6-vw-Do0" secondAttribute="bottom" id="Ayq-qM-C0B"/>
+                            <constraint firstItem="QN6-vw-Do0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BW7-09-dF0"/>
+                            <constraint firstItem="QN6-vw-Do0" firstAttribute="leading" secondItem="L3n-xJ-mo0" secondAttribute="trailing" id="C5U-uN-YLL"/>
                             <constraint firstItem="UgA-dl-a1b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DFY-kc-nhj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QN6-vw-Do0" secondAttribute="trailing" id="J3g-3T-UKh"/>
                             <constraint firstItem="L3n-xJ-mo0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M4T-Yo-wkT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aFC-eF-iUo" secondAttribute="bottom" id="UQO-xW-2rW"/>
                             <constraint firstItem="aFC-eF-iUo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UgV-u7-SUX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L3n-xJ-mo0" secondAttribute="trailing" id="daY-qK-D8y"/>
                             <constraint firstItem="aFC-eF-iUo" firstAttribute="top" secondItem="L3n-xJ-mo0" secondAttribute="bottom" id="iF0-dY-HRo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aFC-eF-iUo" secondAttribute="trailing" id="p48-n1-XAG"/>
+                            <constraint firstItem="L3n-xJ-mo0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="xki-RF-hwv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="UgA-dl-a1b" id="qFi-Mn-g0T"/>
+                        <outlet property="catButton" destination="QN6-vw-Do0" id="6Pa-Lu-9md"/>
+                        <outlet property="foxButton" destination="L3n-xJ-mo0" id="B7z-en-NsS"/>
                         <outlet property="imageView" destination="aFC-eF-iUo" id="hau-h9-Ije"/>
-                        <outlet property="refreshButton" destination="L3n-xJ-mo0" id="J14-PN-YZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
