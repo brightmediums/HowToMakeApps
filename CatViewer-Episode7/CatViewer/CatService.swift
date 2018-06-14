@@ -61,6 +61,8 @@ class CatService: NSObject {
                 print("failed decoding json: \(error.localizedDescription)")
                 self.handleCompletionBlock(image: nil)
             }
+        }else{
+            self.handleCompletionBlock(image: nil)
         }
     }
     
