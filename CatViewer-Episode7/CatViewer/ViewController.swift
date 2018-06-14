@@ -9,59 +9,70 @@
 import UIKit
 
 let serviceURL = "https://randomfox.ca/floof"
-
 class ViewController: UIViewController {
 
-    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var foxRefreshButton: UIButton!
+    @IBOutlet weak var catRefreshButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var image: UIImage? {
-        didSet{
-            if image != nil{
-                self.imageView.image = image
-            }
+        didSet {
+            self.imageView.image = image
         }
     }
-    var catService: CatService?
     var active: Bool = true {
         didSet{
             if active {
                 self.activityIndicator.startAnimating()
-                self.refreshButton.isEnabled = false
+                self.catRefreshButton.isEnabled = false
+                self.foxRefreshButton.isEnabled = false
             }else{
                 self.activityIndicator.stopAnimating()
-                self.refreshButton.isEnabled = true
+                self.catRefreshButton.isEnabled = true
+                self.foxRefreshButton.isEnabled = true
             }
         }
     }
+    var foxService: FoxService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.downloadCat()
+        self.downloadFox()
     }
     
-    func downloadCat() {
-        if self.catService == nil, let url = URL(string: serviceURL) {
-            self.catService = CatService(serviceURL: url, completionBlock: { (image) in
+    func downloadFox() {
+        self.active = true
+        if self.foxService == nil{
+            self.foxService = FoxService(serviceURL: serviceURL, completionHandler: { (image) in
                 if let image = image {
                     self.image = image
                 }
                 self.active = false
             })
         }
-        self.active = true
-        self.catService!.downloadCat()
+        self.foxService?.download()
     }
     
-    func gotCat(){
-        
+    func downloadCat() {
+        self.active = true
+        let catURL = URL(string: "https://cataas.com/cat")
+        DispatchQueue.global(qos: .userInitiated).async {
+            let imageData = NSData(contentsOf: catURL!)
+            DispatchQueue.main.async {
+                self.image = UIImage(data: imageData! as Data)
+                self.active = false
+            }
+        }
     }
 
     @IBAction func didTapRefreshButton(_ sender: Any) {
-        self.downloadCat()
+        self.downloadFox()
     }
     
+    @IBAction func didTapRefreshCat(_ sender: Any) {
+        self.downloadCat()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

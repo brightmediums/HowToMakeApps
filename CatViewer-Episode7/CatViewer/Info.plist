@@ -24,11 +24,6 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>aws.random.cat</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
 			<key>randomfox.ca</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>

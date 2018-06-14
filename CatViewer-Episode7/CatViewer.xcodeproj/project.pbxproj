@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C10ED7EAE9F0CD5E2108176 /* Pods_CatViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67529968151AD0F095B243B0 /* Pods_CatViewer.framework */; };
 		BA55301220CB09D300CF8416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55301120CB09D300CF8416 /* AppDelegate.swift */; };
 		BA55301420CB09D300CF8416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55301320CB09D300CF8416 /* ViewController.swift */; };
 		BA55301720CB09D300CF8416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA55301520CB09D300CF8416 /* Main.storyboard */; };
 		BA55301920CB09D300CF8416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA55301820CB09D300CF8416 /* Assets.xcassets */; };
 		BA55301C20CB09D300CF8416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA55301A20CB09D300CF8416 /* LaunchScreen.storyboard */; };
-		BAC432D320D2AED9000F3780 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC432D220D2AED9000F3780 /* CatService.swift */; };
+		BAC432D520D2CF0B000F3780 /* FoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC432D420D2CF0B000F3780 /* FoxService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67529968151AD0F095B243B0 /* Pods_CatViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		948F60AB718F926E7DA99A9C /* Pods-CatViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatViewer/Pods-CatViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		BA55300E20CB09D300CF8416 /* CatViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA55301120CB09D300CF8416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA55301320CB09D300CF8416 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +26,8 @@
 		BA55301820CB09D300CF8416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA55301B20CB09D300CF8416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA55301D20CB09D300CF8416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAC432D220D2AED9000F3780 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		BAC432D420D2CF0B000F3780 /* FoxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxService.swift; sourceTree = "<group>"; };
+		ED5CFF26C097397F6735F4CE /* Pods-CatViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatViewer/Pods-CatViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C10ED7EAE9F0CD5E2108176 /* Pods_CatViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195F5A240C7AFC920ADD1CC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67529968151AD0F095B243B0 /* Pods_CatViewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA55300520CB09D200CF8416 = {
 			isa = PBXGroup;
 			children = (
 				BA55301020CB09D300CF8416 /* CatViewer */,
 				BA55300F20CB09D300CF8416 /* Products */,
+				C5932A6B8D4973F03BDB56D0 /* Pods */,
+				195F5A240C7AFC920ADD1CC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +77,18 @@
 				BA55301820CB09D300CF8416 /* Assets.xcassets */,
 				BA55301A20CB09D300CF8416 /* LaunchScreen.storyboard */,
 				BA55301D20CB09D300CF8416 /* Info.plist */,
-				BAC432D220D2AED9000F3780 /* CatService.swift */,
+				BAC432D420D2CF0B000F3780 /* FoxService.swift */,
 			);
 			path = CatViewer;
+			sourceTree = "<group>";
+		};
+		C5932A6B8D4973F03BDB56D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				948F60AB718F926E7DA99A9C /* Pods-CatViewer.debug.xcconfig */,
+				ED5CFF26C097397F6735F4CE /* Pods-CatViewer.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA55302020CB09D300CF8416 /* Build configuration list for PBXNativeTarget "CatViewer" */;
 			buildPhases = (
+				8B89236AF3D8DEFE49C47F9E /* [CP] Check Pods Manifest.lock */,
 				BA55300A20CB09D300CF8416 /* Sources */,
 				BA55300B20CB09D300CF8416 /* Frameworks */,
 				BA55300C20CB09D300CF8416 /* Resources */,
+				50BC5FF40D0AB86D08589D8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +159,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50BC5FF40D0AB86D08589D8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CatViewer/Pods-CatViewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatViewer/Pods-CatViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B89236AF3D8DEFE49C47F9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA55300A20CB09D300CF8416 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC432D520D2CF0B000F3780 /* FoxService.swift in Sources */,
 				BA55301420CB09D300CF8416 /* ViewController.swift in Sources */,
 				BA55301220CB09D300CF8416 /* AppDelegate.swift in Sources */,
-				BAC432D320D2AED9000F3780 /* CatService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +351,7 @@
 		};
 		BA55302120CB09D300CF8416 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948F60AB718F926E7DA99A9C /* Pods-CatViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		BA55302220CB09D300CF8416 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED5CFF26C097397F6735F4CE /* Pods-CatViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
