@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="🦊"/>
                                 <connections>
-                                    <action selector="didTapRefreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Xz-x0-phg"/>
+                                    <action selector="didTapFoxButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kkU-7t-F02"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFC-eF-iUo">
@@ -45,7 +45,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="🐈"/>
                                 <connections>
-                                    <action selector="didTapRefreshCat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cgb-xt-lgK"/>
+                                    <action selector="didTapCatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHq-fa-tOy"/>
                                 </connections>
                             </button>
                         </subviews>

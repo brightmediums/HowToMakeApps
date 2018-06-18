@@ -8,7 +8,9 @@
 
 import UIKit
 
-let serviceURL = "https://randomfox.ca/floof"
+let catServiceURL = "https://cataas.com/cat"
+let foxServiceURL = "https://randomfox.ca/floof"
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var foxRefreshButton: UIButton!
@@ -44,7 +46,7 @@ class ViewController: UIViewController {
     func downloadFox() {
         self.active = true
         if self.foxService == nil{
-            self.foxService = FoxService(serviceURL: serviceURL, completionHandler: { (image) in
+            self.foxService = FoxService(serviceURL: foxServiceURL, completionHandler: { (image) in
                 if let image = image {
                     self.image = image
                 }
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
     
     func downloadCat() {
         self.active = true
-        let catURL = URL(string: "https://cataas.com/cat")
+        let catURL = URL(string: catServiceURL)
         DispatchQueue.global(qos: .userInitiated).async {
             let imageData = NSData(contentsOf: catURL!)
             DispatchQueue.main.async {
@@ -66,13 +68,14 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func didTapRefreshButton(_ sender: Any) {
+    @IBAction func didTapFoxButton(_ sender: Any) {
         self.downloadFox()
     }
     
-    @IBAction func didTapRefreshCat(_ sender: Any) {
+    @IBAction func didTapCatButton(_ sender: Any) {
         self.downloadCat()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
