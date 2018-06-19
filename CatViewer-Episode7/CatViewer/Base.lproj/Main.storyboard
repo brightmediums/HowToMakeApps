@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="60" id="9Sd-Yq-ode"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="🐈"/>
+                                <state key="normal" title="😸"/>
                                 <connections>
                                     <action selector="didTapCatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHq-fa-tOy"/>
                                 </connections>
