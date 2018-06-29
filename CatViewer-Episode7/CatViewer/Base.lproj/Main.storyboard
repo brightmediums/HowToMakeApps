@@ -70,7 +70,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="UgA-dl-a1b" id="qFi-Mn-g0T"/>
                         <outlet property="catRefreshButton" destination="NZH-Ls-KS5" id="3Mb-gh-AGR"/>
-                        <outlet property="foxRefreshButton" destination="L3n-xJ-mo0" id="cle-RK-wBC"/>
+                        <outlet property="foxRefreshButton" destination="L3n-xJ-mo0" id="4dt-I1-fkw"/>
                         <outlet property="imageView" destination="aFC-eF-iUo" id="hau-h9-Ije"/>
                     </connections>
                 </viewController>
