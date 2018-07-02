@@ -15,6 +15,7 @@
 		BA74DA0120DC371600A7503C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA74D9FF20DC371600A7503C /* LaunchScreen.storyboard */; };
 		BA74DA0920DD892B00A7503C /* waveform_data.json in Resources */ = {isa = PBXBuildFile; fileRef = BA74DA0820DD892B00A7503C /* waveform_data.json */; };
 		BACA79A320E66A9B0028CFC9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79A220E66A9B0028CFC9 /* PaddingLabel.swift */; };
+		BACA79A520EA536D0028CFC9 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79A420EA536D0028CFC9 /* WaveformView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BA74DA0220DC371600A7503C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA74DA0820DD892B00A7503C /* waveform_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waveform_data.json; sourceTree = SOURCE_ROOT; };
 		BACA79A220E66A9B0028CFC9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		BACA79A420EA536D0028CFC9 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		DD2B356620DF770D0B9FAE5A /* Pods-AudioScrubber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioScrubber.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioScrubber/Pods-AudioScrubber.release.xcconfig"; sourceTree = "<group>"; };
 		E2DE41B31050CA86D8027F2B /* Pods_AudioScrubber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioScrubber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				BA74D9FF20DC371600A7503C /* LaunchScreen.storyboard */,
 				BA74DA0220DC371600A7503C /* Info.plist */,
 				BACA79A220E66A9B0028CFC9 /* PaddingLabel.swift */,
+				BACA79A420EA536D0028CFC9 /* WaveformView.swift */,
 			);
 			path = AudioScrubber;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				BACA79A320E66A9B0028CFC9 /* PaddingLabel.swift in Sources */,
 				BA74D9F920DC371600A7503C /* ViewController.swift in Sources */,
 				BA74D9F720DC371600A7503C /* AppDelegate.swift in Sources */,
+				BACA79A520EA536D0028CFC9 /* WaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

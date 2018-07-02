@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="trailing" secondItem="8Bl-Yf-te5" secondAttribute="trailing" id="bes-01-IGP"/>
                                 </constraints>
                             </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iri-T6-Xpp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iri-T6-Xpp" customClass="WaveformView" customModule="AudioScrubber" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="347" width="375" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="hQt-Is-4Tp"/>
