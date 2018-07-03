@@ -19,7 +19,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var coverArtImageView: UIImageView!
     @IBOutlet weak var waveformScrollView: UIScrollView!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var timeLabelConstraint: NSLayoutConstraint!
     
     var blurEffectView: UIVisualEffectView?
     
