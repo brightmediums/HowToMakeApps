@@ -98,7 +98,6 @@
                         <outlet property="coverArtImageView" destination="m7k-zi-JDX" id="6fy-ZQ-cC5"/>
                         <outlet property="coverArtScrollView" destination="3WQ-BJ-aPv" id="7Gf-dZ-SPR"/>
                         <outlet property="timeLabel" destination="NI9-rx-0Em" id="cky-LN-NZe"/>
-                        <outlet property="timeLabelConstraint" destination="5Q2-D0-uYy" id="Z34-kk-BbC"/>
                         <outlet property="waveformScrollView" destination="0CN-Uc-sQt" id="64i-iI-EjS"/>
                     </connections>
                 </viewController>
