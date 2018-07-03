@@ -13,7 +13,6 @@
 		BACA79D620EA62FB0028CFC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D420EA62FB0028CFC9 /* Main.storyboard */; };
 		BACA79D820EA62FC0028CFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D720EA62FC0028CFC9 /* Assets.xcassets */; };
 		BACA79DB20EA62FC0028CFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D920EA62FC0028CFC9 /* LaunchScreen.storyboard */; };
-		BACA79E420EA630C0028CFC9 /* ChildishGambino.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BACA79E220EA630C0028CFC9 /* ChildishGambino.jpg */; };
 		BACA79E520EA630C0028CFC9 /* waveform_data.json in Resources */ = {isa = PBXBuildFile; fileRef = BACA79E320EA630C0028CFC9 /* waveform_data.json */; };
 		BACA79ED20EBC4F40028CFC9 /* WaveformScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79EC20EBC4F40028CFC9 /* WaveformScrollView.swift */; };
 		BACA79EF20EBCF080028CFC9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */; };
@@ -30,7 +29,6 @@
 		BACA79D720EA62FC0028CFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACA79DA20EA62FC0028CFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BACA79DC20EA62FC0028CFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BACA79E220EA630C0028CFC9 /* ChildishGambino.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChildishGambino.jpg; sourceTree = "<group>"; };
 		BACA79E320EA630C0028CFC9 /* waveform_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waveform_data.json; sourceTree = "<group>"; };
 		BACA79EC20EBC4F40028CFC9 /* WaveformScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformScrollView.swift; sourceTree = "<group>"; };
 		BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
@@ -51,7 +49,6 @@
 		BACA79C420EA62FB0028CFC9 = {
 			isa = PBXGroup;
 			children = (
-				BACA79E220EA630C0028CFC9 /* ChildishGambino.jpg */,
 				BACA79E320EA630C0028CFC9 /* waveform_data.json */,
 				BACA79CF20EA62FB0028CFC9 /* AudioCloud */,
 				BACA79CE20EA62FB0028CFC9 /* Products */,
@@ -164,7 +161,6 @@
 				BACA79D820EA62FC0028CFC9 /* Assets.xcassets in Resources */,
 				BACA79D620EA62FB0028CFC9 /* Main.storyboard in Resources */,
 				BACA79E520EA630C0028CFC9 /* waveform_data.json in Resources */,
-				BACA79E420EA630C0028CFC9 /* ChildishGambino.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

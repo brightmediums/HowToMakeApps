@@ -10,7 +10,7 @@ import UIKit
 
 let animationDuration       = 0.25
 let scaleFactor             = CGFloat(1.4)
-let springDamping           = CGFloat(0.6)
+let springDamping           = CGFloat(0.5)
 let initialSpringVelocity   = CGFloat(0.5)
 
 class ViewController: UIViewController, UIScrollViewDelegate {

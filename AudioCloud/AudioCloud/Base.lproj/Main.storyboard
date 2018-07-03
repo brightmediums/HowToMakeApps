@@ -22,7 +22,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WQ-BJ-aPv">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChildishGambino.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m7k-zi-JDX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChildishGambino" translatesAutoresizingMaskIntoConstraints="NO" id="m7k-zi-JDX">
                                         <rect key="frame" x="0.0" y="0.0" width="647" height="647"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="m7k-zi-JDX" secondAttribute="height" multiplier="1:1" id="Nii-m1-oFA"/>
@@ -107,6 +107,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ChildishGambino.jpg" width="630" height="630"/>
+        <image name="ChildishGambino" width="630" height="630"/>
     </resources>
 </document>
