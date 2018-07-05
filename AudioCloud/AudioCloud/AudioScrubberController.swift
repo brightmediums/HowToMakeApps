@@ -97,8 +97,7 @@ protocol ScrubberDelegate {
     
     private func notifyDelegateOfScroll() {
         let point = scrollView.contentOffset
-        let width = scrollView.contentSize.width
-        let offsetInPercent = (point.x + scrollView.contentInset.left) / width
+        let offsetInPercent = (point.x + scrollView.contentInset.left) / scrollView.contentSize.width
         scrubberDelegate?.progressUpdatedTo(progress: offsetInPercent)
     }
 }

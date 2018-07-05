@@ -22,7 +22,7 @@
 		BA6D862420EEC412002653FD /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		BACA79CD20EA62FB0028CFC9 /* AudioCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA79D020EA62FB0028CFC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BACA79D220EA62FB0028CFC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BACA79D220EA62FB0028CFC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		BACA79D520EA62FB0028CFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BACA79D720EA62FC0028CFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACA79DA20EA62FC0028CFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -302,7 +302,6 @@
 		};
 		BACA79E020EA62FC0028CFC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FC0248B989FA6D786171AA9 /* Pods-AudioCloud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,7 +321,6 @@
 		};
 		BACA79E120EA62FC0028CFC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5314B8C1C89343B2399E3742 /* Pods-AudioCloud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
