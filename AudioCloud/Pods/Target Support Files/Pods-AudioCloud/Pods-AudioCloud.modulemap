@@ -1,6 +1,0 @@
-framework module Pods_AudioCloud {
-  umbrella header "Pods-AudioCloud-umbrella.h"
-
-  export *
-  module * { export * }
-}
