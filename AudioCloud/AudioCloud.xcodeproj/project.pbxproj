@@ -14,7 +14,7 @@
 		BACA79D820EA62FC0028CFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D720EA62FC0028CFC9 /* Assets.xcassets */; };
 		BACA79DB20EA62FC0028CFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D920EA62FC0028CFC9 /* LaunchScreen.storyboard */; };
 		BACA79E520EA630C0028CFC9 /* waveform_data.json in Resources */ = {isa = PBXBuildFile; fileRef = BACA79E320EA630C0028CFC9 /* waveform_data.json */; };
-		BACA79ED20EBC4F40028CFC9 /* WaveformScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79EC20EBC4F40028CFC9 /* WaveformScrollView.swift */; };
+		BACA79ED20EBC4F40028CFC9 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79EC20EBC4F40028CFC9 /* WaveformView.swift */; };
 		BACA79EF20EBCF080028CFC9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		BACA79DA20EA62FC0028CFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BACA79DC20EA62FC0028CFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACA79E320EA630C0028CFC9 /* waveform_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waveform_data.json; sourceTree = "<group>"; };
-		BACA79EC20EBC4F40028CFC9 /* WaveformScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformScrollView.swift; sourceTree = "<group>"; };
+		BACA79EC20EBC4F40028CFC9 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +74,7 @@
 				BACA79D720EA62FC0028CFC9 /* Assets.xcassets */,
 				BACA79D920EA62FC0028CFC9 /* LaunchScreen.storyboard */,
 				BACA79DC20EA62FC0028CFC9 /* Info.plist */,
-				BACA79EC20EBC4F40028CFC9 /* WaveformScrollView.swift */,
+				BACA79EC20EBC4F40028CFC9 /* WaveformView.swift */,
 				BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */,
 			);
 			path = AudioCloud;
@@ -212,7 +212,7 @@
 			files = (
 				BACA79EF20EBCF080028CFC9 /* PaddingLabel.swift in Sources */,
 				BACA79D320EA62FB0028CFC9 /* ViewController.swift in Sources */,
-				BACA79ED20EBC4F40028CFC9 /* WaveformScrollView.swift in Sources */,
+				BACA79ED20EBC4F40028CFC9 /* WaveformView.swift in Sources */,
 				BACA79D120EA62FB0028CFC9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVR9HX5Y9T;
 				INFOPLIST_FILE = AudioCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVR9HX5Y9T;
 				INFOPLIST_FILE = AudioCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var coverArtScrollView: UIScrollView!
     @IBOutlet weak var coverArtImageView: UIImageView!
-    @IBOutlet weak var waveformScrollView: UIScrollView!
+    @IBOutlet weak var waveformView: WaveformView!
     @IBOutlet weak var timeLabel: UILabel!
     
     var blurEffectView: UIVisualEffectView?
@@ -84,7 +84,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     // Disable scrollview inertia
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        self.waveformScrollView.setContentOffset(scrollView.contentOffset, animated: false)
+        //self.waveformView.contentOffset = scrollView.contentOffset
     }
 
     // Basic blur view inserted above the cover art

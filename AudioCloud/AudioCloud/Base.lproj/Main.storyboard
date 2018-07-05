@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,15 +37,13 @@
                                     <constraint firstAttribute="trailing" secondItem="m7k-zi-JDX" secondAttribute="trailing" id="bHH-ZL-Jmg"/>
                                 </constraints>
                             </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CN-Uc-sQt" customClass="WaveformScrollView" customModule="AudioCloud" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="347" width="375" height="180"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FP-5S-d78" customClass="WaveformView" customModule="AudioCloud" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="327" width="375" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Gfu-QL-ary"/>
+                                    <constraint firstAttribute="height" constant="200" id="RVf-J6-ve6"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KGe-sg-h6g"/>
-                                </connections>
-                            </scrollView>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI9-rx-0Em" customClass="PaddingLabel" customModule="AudioCloud" customModuleProvider="target">
                                 <rect key="frame" x="140.5" y="452" width="95" height="28"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,12 +80,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6FP-5S-d78" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2A4-Su-jed"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NI9-rx-0Em" secondAttribute="bottom" constant="187" id="5Q2-D0-uYy"/>
                             <constraint firstItem="3WQ-BJ-aPv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A3D-Db-Sgx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0CN-Uc-sQt" secondAttribute="trailing" id="Goa-lc-HNU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6FP-5S-d78" secondAttribute="bottom" constant="140" id="Sh3-wj-doJ"/>
                             <constraint firstItem="3WQ-BJ-aPv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xv4-uj-KC9"/>
-                            <constraint firstItem="0CN-Uc-sQt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d3f-sa-ob0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0CN-Uc-sQt" secondAttribute="bottom" constant="140" id="gKq-GO-GvG"/>
+                            <constraint firstItem="6FP-5S-d78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="muV-Nv-Fj8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3WQ-BJ-aPv" secondAttribute="trailing" id="qDW-gH-xcg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3WQ-BJ-aPv" secondAttribute="bottom" id="xVt-HR-G0G"/>
                             <constraint firstItem="NI9-rx-0Em" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xtc-lc-0MK"/>
@@ -98,11 +96,12 @@
                         <outlet property="coverArtImageView" destination="m7k-zi-JDX" id="6fy-ZQ-cC5"/>
                         <outlet property="coverArtScrollView" destination="3WQ-BJ-aPv" id="7Gf-dZ-SPR"/>
                         <outlet property="timeLabel" destination="NI9-rx-0Em" id="cky-LN-NZe"/>
-                        <outlet property="waveformScrollView" destination="0CN-Uc-sQt" id="64i-iI-EjS"/>
+                        <outlet property="waveformView" destination="6FP-5S-d78" id="pf9-Sc-OVP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
     <resources>
