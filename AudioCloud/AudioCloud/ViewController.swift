@@ -8,6 +8,7 @@
 
 import UIKit
 
+// animation configuration
 let animationDuration       = 0.25
 let scaleFactor             = CGFloat(1.4)
 
