@@ -131,15 +131,13 @@ protocol ScrubberDelegate {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !inertiaEnabled || !scrollView.isDecelerating{
+        if !inertiaEnabled || (inertiaEnabled && !decelerate) {
             scrubberDelegate?.active = false
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if inertiaEnabled {
-            scrubberDelegate?.active = false
-        }
+        scrubberDelegate?.active = false
     }
     
     func notifyDelegateOfScroll() {
