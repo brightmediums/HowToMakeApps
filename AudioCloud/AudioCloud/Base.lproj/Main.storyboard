@@ -139,7 +139,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiD-QG-Cwm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqV-Sx-0ia">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqV-Sx-0ia">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <connections>
                                     <outlet property="delegate" destination="Wcm-0a-XbW" id="I0z-6L-miF"/>
@@ -164,10 +164,10 @@
                         <viewLayoutGuide key="safeArea" id="W8m-WW-yeR"/>
                     </view>
                     <connections>
-                        <outlet property="colorView" destination="J7w-R9-DdG" id="gGh-2X-tCJ"/>
-                        <outlet property="maskLeftHandView" destination="Hwt-yj-dZz" id="K1i-Rx-Cc4"/>
-                        <outlet property="maskRightHandView" destination="0MS-f8-IKi" id="bjB-6y-lu5"/>
                         <outlet property="maskView" destination="WiD-QG-Cwm" id="jTm-T3-dpk"/>
+                        <outlet property="maskedViewLeftSide" destination="Hwt-yj-dZz" id="K1i-Rx-Cc4"/>
+                        <outlet property="maskedViewRightSide" destination="0MS-f8-IKi" id="bjB-6y-lu5"/>
+                        <outlet property="maskedWaveformView" destination="J7w-R9-DdG" id="gGh-2X-tCJ"/>
                         <outlet property="scrollView" destination="oqV-Sx-0ia" id="mxQ-EC-g8H"/>
                     </connections>
                 </viewController>

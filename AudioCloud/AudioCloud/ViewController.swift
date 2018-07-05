@@ -19,6 +19,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, ScrubberDelegate {
     
     var blurEffectView: UIVisualEffectView?
     
+    // UI respond's when the user is scrolling the waveform by
+    // animating the time label and blurring the background
     var active: Bool = false {
         didSet {
             if active {
@@ -49,11 +51,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, ScrubberDelegate {
         super.viewDidLoad()
         setupBlurView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // MARK: - Blur view
     func setupBlurView() {
@@ -75,14 +72,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, ScrubberDelegate {
         let coverArtOffset = CGPoint(x: newX, y: 0.0)
         coverArtScrollView.contentOffset = coverArtOffset
     }
-    
-    func didSetOffset(point: CGPoint, factor: CGFloat) {
-        // Use that factor to set the new offset for the cover art
-        let newX = point.x / factor
-        var coverArtOffset = self.coverArtScrollView.contentOffset
-        coverArtOffset.x = newX
-        
-        self.coverArtScrollView.setContentOffset(coverArtOffset, animated: false)
-    }
+
 }
 

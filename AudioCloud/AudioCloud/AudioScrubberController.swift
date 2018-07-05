@@ -11,8 +11,6 @@ import UIKit
 // Some constants that will define our waveform
 let barWidth = CGFloat(2)
 let barSpacing = CGFloat(1.5)
-
-// Some constantst that define our animations
 let topToBottomRatio = CGFloat(2.0 / 3.0)
 let verticalSpacing = CGFloat(1.0)
 
@@ -22,22 +20,25 @@ let samples = [106, 77, 53, 15, 83, 80, 63, 43, 80, 81, 66, 75, 78, 57, 18, 73, 
 let containerHeight = CGFloat(200)
 
 protocol ScrubberDelegate {
+    // factor is a percent representing amount of content that has been scrolled
     func didOffsetPositionByFactor(factor: CGFloat)
     var active: Bool { get set}
 }
 
-class AudioScrubberController: UIViewController, UIScrollViewDelegate {
-    @IBOutlet weak var maskLeftHandView: UIView!
-    @IBOutlet weak var maskRightHandView: UIView!
+@IBDesignable class AudioScrubberController: UIViewController, UIScrollViewDelegate {
+    @IBOutlet weak var maskedViewLeftSide: UIView!
+    @IBOutlet weak var maskedViewRightSide: UIView!
     @IBOutlet weak var maskView: UIScrollView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var maskedWaveformView: UIView!
     var waveformView: UIImageView!
+    var inertiaEnabled: Bool = true
     
     var scrubberDelegate: ScrubberDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.inertiaEnabled = false
         
         let image = waveformImage()
         waveformView = UIImageView(image: image)
@@ -48,22 +49,21 @@ class AudioScrubberController: UIViewController, UIScrollViewDelegate {
         maskView.contentInset = UIEdgeInsetsMake(0, self.view.frame.size.width / 2.0, 0.0, self.view.frame.size.width / 2.0)
         maskView.contentSize = image.size
         maskView.frame.size = image.size
+        
         scrollView.contentInset = maskView.contentInset
         scrollView.contentSize = maskView.contentSize
-        colorView.mask = maskView
-        maskLeftHandView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "WaveformGradient-Left"))
-        maskRightHandView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "WaveformGradient-Right"))
+        
+        maskedViewLeftSide.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "WaveformGradient-Left"))
+        maskedViewRightSide.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "WaveformGradient-Right"))
+        maskedWaveformView.mask = maskView
     }
 
+    // We need to get access to the parent VC as our scrubber delegate
     override func didMove(toParentViewController parent: UIViewController?) {
         self.scrubberDelegate = parent as? ScrubberDelegate
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
+    // heart of the scrubber. this method draws the waveform as UIImage
     func waveformImage() -> UIImage {
         let containerWidth = CGFloat(samples.count) * (barSpacing + barWidth)
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: containerWidth, height: containerHeight))
@@ -107,33 +107,16 @@ class AudioScrubberController: UIViewController, UIScrollViewDelegate {
         return image
     }
     
-    func notifyDelegateOfScroll() {
-        var point = scrollView.contentOffset
-        point.x += scrollView.contentInset.left
-        let width = scrollView.contentSize.width
-        let offsetInPercent = point.x / width
-        scrubberDelegate?.didOffsetPositionByFactor(factor: offsetInPercent)
-    }
-    
     // MARK: - ScrollView Delegate
-    
     // Disable scrolling inertia
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        self.scrollView.setContentOffset(scrollView.contentOffset, animated: false)
+        if !inertiaEnabled {
+            self.scrollView.setContentOffset(scrollView.contentOffset, animated: false)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        var offset = scrollView.contentOffset
-        let leftHandLimit = 0.0 - (scrollView.contentInset.left)
-        let rightHandLimit = scrollView.contentSize.width - scrollView.contentInset.left
-        
-        if offset.x < leftHandLimit {
-            offset.x = leftHandLimit
-            scrollView.contentOffset = offset
-        } else if offset.x > rightHandLimit {
-            offset.x = rightHandLimit
-            scrollView.contentOffset = offset
-        }
+        let offset = scrollView.contentOffset
         maskView.contentOffset = offset
         notifyDelegateOfScroll()
     }
@@ -143,7 +126,22 @@ class AudioScrubberController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-       scrubberDelegate?.active = false
+        if !inertiaEnabled {
+            scrubberDelegate?.active = false
+        }
     }
-
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if inertiaEnabled {
+            scrubberDelegate?.active = false
+        }
+    }
+    
+    func notifyDelegateOfScroll() {
+        var point = scrollView.contentOffset
+        point.x += scrollView.contentInset.left
+        let width = scrollView.contentSize.width
+        let offsetInPercent = point.x / width
+        scrubberDelegate?.didOffsetPositionByFactor(factor: offsetInPercent)
+    }
 }
