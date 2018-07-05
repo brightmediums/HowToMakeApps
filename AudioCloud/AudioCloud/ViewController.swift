@@ -54,7 +54,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, ScrubberDelegate {
     }
     
     // MARK: - Blur view
-    func setupBlurView() {
+    private func setupBlurView() {
         if self.blurEffectView == nil{
             let blurEffect = UIBlurEffect(style: .dark)
             self.blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -66,13 +66,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, ScrubberDelegate {
     }
     
     // MARK: - Scrubber Delegate
-    
     // Move the cover art scrollview when the waveform scrollview moves
-    func didScrollToPercentComplete(factor: CGFloat) {
-        let newX = (coverArtScrollView.contentSize.width - coverArtScrollView.frame.size.width) * factor
+    func progressUpdatedTo(progress: CGFloat) {
+        let newX = (coverArtScrollView.contentSize.width - coverArtScrollView.frame.size.width) * progress
         let coverArtOffset = CGPoint(x: newX, y: 0.0)
         coverArtScrollView.contentOffset = coverArtOffset
     }
-
 }
-

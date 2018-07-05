@@ -14,11 +14,12 @@ let barSpacing = CGFloat(1.5)
 let topToBottomRatio = CGFloat(2.0 / 3.0)
 let verticalSpacing = CGFloat(1.0)
 
-
-
+// This defines how this VC communicates with the main VC
 protocol ScrubberDelegate {
-    // factor is a percent representing amount of content that has been scrolled
-    func didScrollToPercentComplete(factor: CGFloat)
+    /**
+     factor is a percent representing amount of content that has been scrolled
+     */
+    func progressUpdatedTo(progress: CGFloat)
     var active: Bool { get set}
 }
 
@@ -29,10 +30,13 @@ protocol ScrubberDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var maskedWaveformView: UIView!
     var waveformView: UIImageView!
+    
+    // Set this to false to match SoundCloud's functionality
     var inertiaEnabled: Bool = true
     
     var scrubberDelegate: ScrubberDelegate?
     
+    // MARK: - UIView Basics
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.inertiaEnabled = false
@@ -56,6 +60,7 @@ protocol ScrubberDelegate {
     }
 
     // We need to get access to the parent VC as our scrubber delegate
+    // View containment provides a method to do that
     override func didMove(toParentViewController parent: UIViewController?) {
         self.scrubberDelegate = parent as? ScrubberDelegate
     }
@@ -77,7 +82,7 @@ protocol ScrubberDelegate {
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-       scrubberDelegate?.active = true
+        scrubberDelegate?.active = true
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -90,11 +95,10 @@ protocol ScrubberDelegate {
         scrubberDelegate?.active = false
     }
     
-    func notifyDelegateOfScroll() {
-        var point = scrollView.contentOffset
-        point.x += scrollView.contentInset.left
+    private func notifyDelegateOfScroll() {
+        let point = scrollView.contentOffset
         let width = scrollView.contentSize.width
-        let offsetInPercent = point.x / width
-        scrubberDelegate?.didScrollToPercentComplete(factor: offsetInPercent)
+        let offsetInPercent = (point.x + scrollView.contentInset.left) / width
+        scrubberDelegate?.progressUpdatedTo(progress: offsetInPercent)
     }
 }
