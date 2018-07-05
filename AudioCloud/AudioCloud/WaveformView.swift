@@ -31,6 +31,8 @@ class WaveformView: UIView, UIScrollViewDelegate {
     var maskScrollView: UIScrollView!
     var imageView: UIImageView!
     
+    var viewController: ViewController?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -101,7 +103,7 @@ class WaveformView: UIView, UIScrollViewDelegate {
         colorView.mask = maskScrollView
         
         // Waveform starts at mid-screen (horizontally) when the audio starts, so we need some left/right padding (insets)
-        scrollView.contentInset = UIEdgeInsetsMake(0, self.frame.size.width / 2.0, 0.0, self.frame.size.width / 2.0)
+        scrollView.contentInset = maskScrollView.contentInset
         scrollView.contentSize = maskScrollView.contentSize
         scrollView.backgroundColor = UIColor.clear
     }
@@ -149,12 +151,40 @@ class WaveformView: UIView, UIScrollViewDelegate {
         return image
     }
     
+    // MARK: - ScrollView Delegate
+    
+    // Disable scrolling inertia
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         self.scrollView.setContentOffset(scrollView.contentOffset, animated: false)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        maskScrollView.contentOffset = scrollView.contentOffset
+        var offset = scrollView.contentOffset
+        let leftHandLimit = 0.0 - (scrollView.contentInset.left)
+        let rightHandLimit = scrollView.contentSize.width - scrollView.contentInset.left
+        
+        if offset.x < leftHandLimit {
+            offset.x = leftHandLimit
+            scrollView.contentOffset = offset
+        } else if offset.x > rightHandLimit {
+            offset.x = rightHandLimit
+            scrollView.contentOffset = offset
+        }
+        maskScrollView.contentOffset = offset
+        if let vc = viewController {
+            vc.scrollViewDidScroll(scrollView)
+        }
     }
-
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if let vc = viewController {
+            vc.scrollViewWillBeginDragging(scrollView)
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if let vc = viewController {
+            vc.scrollViewDidEndDragging(scrollView, willDecelerate: decelerate)
+        }
+    }
 }

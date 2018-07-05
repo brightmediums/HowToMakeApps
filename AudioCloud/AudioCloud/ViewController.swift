@@ -45,8 +45,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             }
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.waveformView.viewController = self
         setupBlurView()
     }
 
@@ -67,12 +69,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let point = scrollView.contentOffset
         
-        // adjust the position so that it's never a negative value
-        let modifiedX = point.x + (scrollView.frame.size.width / 2.0)
+        // adjust the position for the content inset so that it's never a negative value
+        let modifiedX = point.x + scrollView.contentInset.left
         
         // We get the difference in width between the scrollview's content size and the frame size
         // adjusting for the scrollview insets (half the scrollview frame)
-        let factor = (scrollView.contentSize.width + scrollView.frame.size.width / 2.0) / scrollView.frame.size.width
+        let factor = (scrollView.contentSize.width + scrollView.contentInset.left) / scrollView.frame.size.width
         
         // Use that factor to set the new offset for the cover art
         let newX = modifiedX / factor
@@ -80,11 +82,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         coverArtOffset.x = newX
         
         self.coverArtScrollView.setContentOffset(coverArtOffset, animated: false)
-    }
-    
-    // Disable scrollview inertia
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        //self.waveformView.contentOffset = scrollView.contentOffset
     }
 
     // Basic blur view inserted above the cover art
