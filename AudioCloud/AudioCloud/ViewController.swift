@@ -68,7 +68,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, ScrubberDelegate {
     // MARK: - Scrubber Delegate
     
     // Move the cover art scrollview when the waveform scrollview moves
-    func didOffsetPositionByFactor(factor: CGFloat) {
+    func didScrollToPercentComplete(factor: CGFloat) {
         let newX = (coverArtScrollView.contentSize.width - coverArtScrollView.frame.size.width) * factor
         let coverArtOffset = CGPoint(x: newX, y: 0.0)
         coverArtScrollView.contentOffset = coverArtOffset

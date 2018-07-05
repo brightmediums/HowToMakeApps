@@ -21,7 +21,7 @@ let containerHeight = CGFloat(200)
 
 protocol ScrubberDelegate {
     // factor is a percent representing amount of content that has been scrolled
-    func didOffsetPositionByFactor(factor: CGFloat)
+    func didScrollToPercentComplete(factor: CGFloat)
     var active: Bool { get set}
 }
 
@@ -70,6 +70,9 @@ protocol ScrubberDelegate {
         
         let image = renderer.image { ctx in
             
+            // We need to draw the top bars and the bottom bars separately since they have different fill colors
+            // Rather than looping once and drawing twice each loop, drawing hundreds of times
+            // We will loop twice and draw only twice
             var count = 0
             samples.forEach{ sample in
                 let x = CGFloat(count) * (barWidth + barSpacing)
@@ -84,9 +87,9 @@ protocol ScrubberDelegate {
                 
                 count += 1
             }
-            
             ctx.cgContext.drawPath(using: .fill)
             
+            // Now for the bottom bars
             count = 0
             samples.forEach{ sample in
                 let x = CGFloat(count) * (barWidth + barSpacing)
@@ -98,9 +101,9 @@ protocol ScrubberDelegate {
                 let bottomBar = CGRect(x: x, y: bottomY, width: barWidth, height: bottomHeight)
                 ctx.cgContext.setFillColor(UIColor(white: 1.0, alpha: 0.9).cgColor)
                 ctx.cgContext.addRect(bottomBar)
+             
                 count += 1
             }
-            
             ctx.cgContext.drawPath(using: .fill)
         }
         
@@ -115,9 +118,11 @@ protocol ScrubberDelegate {
         }
     }
     
+    // We need to programmatically make the offset of the masked waveform match the offset of the main scrollview
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset
         maskView.contentOffset = offset
+        
         notifyDelegateOfScroll()
     }
     
@@ -126,7 +131,7 @@ protocol ScrubberDelegate {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !inertiaEnabled {
+        if !inertiaEnabled || !scrollView.isDecelerating{
             scrubberDelegate?.active = false
         }
     }
@@ -142,6 +147,6 @@ protocol ScrubberDelegate {
         point.x += scrollView.contentInset.left
         let width = scrollView.contentSize.width
         let offsetInPercent = point.x / width
-        scrubberDelegate?.didOffsetPositionByFactor(factor: offsetInPercent)
+        scrubberDelegate?.didScrollToPercentComplete(factor: offsetInPercent)
     }
 }
