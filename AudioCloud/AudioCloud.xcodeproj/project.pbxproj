@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02CEC4DCAD47E610DB4B5977 /* Pods_AudioCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509EC04336FFB18359A83F9F /* Pods_AudioCloud.framework */; };
+		BA6D862520EEC412002653FD /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D862420EEC412002653FD /* UIImageExtensions.swift */; };
 		BACA79D120EA62FB0028CFC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79D020EA62FB0028CFC9 /* AppDelegate.swift */; };
 		BACA79D320EA62FB0028CFC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79D220EA62FB0028CFC9 /* ViewController.swift */; };
 		BACA79D620EA62FB0028CFC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D420EA62FB0028CFC9 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		509EC04336FFB18359A83F9F /* Pods_AudioCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5314B8C1C89343B2399E3742 /* Pods-AudioCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioCloud/Pods-AudioCloud.release.xcconfig"; sourceTree = "<group>"; };
 		5FC0248B989FA6D786171AA9 /* Pods-AudioCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AudioCloud/Pods-AudioCloud.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6D862420EEC412002653FD /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		BACA79CD20EA62FB0028CFC9 /* AudioCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA79D020EA62FB0028CFC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACA79D220EA62FB0028CFC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				BACA79DC20EA62FC0028CFC9 /* Info.plist */,
 				BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */,
 				BACA79F020EE73CC0028CFC9 /* AudioScrubberController.swift */,
+				BA6D862420EEC412002653FD /* UIImageExtensions.swift */,
 			);
 			path = AudioCloud;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				BACA79EF20EBCF080028CFC9 /* PaddingLabel.swift in Sources */,
 				BACA79F120EE73CC0028CFC9 /* AudioScrubberController.swift in Sources */,
+				BA6D862520EEC412002653FD /* UIImageExtensions.swift in Sources */,
 				BACA79D320EA62FB0028CFC9 /* ViewController.swift in Sources */,
 				BACA79D120EA62FB0028CFC9 /* AppDelegate.swift in Sources */,
 			);
