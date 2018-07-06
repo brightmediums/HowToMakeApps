@@ -8,16 +8,11 @@
 
 import UIKit
 
-// Some constants that will define our waveform
-let barWidth = CGFloat(2)
-let barSpacing = CGFloat(1.5)
-let topToBottomRatio = CGFloat(2.0 / 3.0)
-let verticalSpacing = CGFloat(1.0)
-
 // This defines how this VC communicates with the main VC
 protocol ScrubberDelegate {
     /**
-     factor is a percent representing amount of content that has been scrolled
+     progress is a percent representing amount of content that has been scrolled
+     - Parameter progress: value between 0.0 and 1.0 indicating % of waveform scrubbed
      */
     func progressUpdatedTo(progress: CGFloat)
     var active: Bool { get set}
