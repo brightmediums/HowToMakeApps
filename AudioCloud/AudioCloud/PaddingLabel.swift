@@ -5,6 +5,9 @@
 //  Created by Joshua Stephenson on 7/3/18.
 //  Copyright © 2018 Bright Mediums. All rights reserved.
 //
+/*
+ Shamelessly stolen from: https://stackoverflow.com/questions/27459746/adding-space-padding-to-a-uilabel
+ */
 
 import UIKit
 
