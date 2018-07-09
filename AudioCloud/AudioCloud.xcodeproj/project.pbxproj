@@ -13,7 +13,6 @@
 		BACA79D620EA62FB0028CFC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D420EA62FB0028CFC9 /* Main.storyboard */; };
 		BACA79D820EA62FC0028CFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D720EA62FC0028CFC9 /* Assets.xcassets */; };
 		BACA79DB20EA62FC0028CFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA79D920EA62FC0028CFC9 /* LaunchScreen.storyboard */; };
-		BACA79E520EA630C0028CFC9 /* waveform_data.json in Resources */ = {isa = PBXBuildFile; fileRef = BACA79E320EA630C0028CFC9 /* waveform_data.json */; };
 		BACA79EF20EBCF080028CFC9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */; };
 		BACA79F120EE73CC0028CFC9 /* AudioScrubberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA79F020EE73CC0028CFC9 /* AudioScrubberController.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		BACA79D720EA62FC0028CFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACA79DA20EA62FC0028CFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BACA79DC20EA62FC0028CFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BACA79E320EA630C0028CFC9 /* waveform_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waveform_data.json; sourceTree = "<group>"; };
 		BACA79EE20EBCF080028CFC9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		BACA79F020EE73CC0028CFC9 /* AudioScrubberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioScrubberController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,7 +44,6 @@
 		BACA79C420EA62FB0028CFC9 = {
 			isa = PBXGroup;
 			children = (
-				BACA79E320EA630C0028CFC9 /* waveform_data.json */,
 				BACA79CF20EA62FB0028CFC9 /* AudioCloud */,
 				BACA79CE20EA62FB0028CFC9 /* Products */,
 				DBFC9B9F98FC3B5B008608CC /* Frameworks */,
@@ -145,7 +142,6 @@
 				BACA79DB20EA62FC0028CFC9 /* LaunchScreen.storyboard in Resources */,
 				BACA79D820EA62FC0028CFC9 /* Assets.xcassets in Resources */,
 				BACA79D620EA62FB0028CFC9 /* Main.storyboard in Resources */,
-				BACA79E520EA630C0028CFC9 /* waveform_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
