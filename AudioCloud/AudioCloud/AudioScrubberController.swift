@@ -34,7 +34,7 @@ protocol ScrubberDelegate {
     // MARK: - UIView Basics
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.inertiaEnabled = false
+        self.inertiaEnabled = false
         
         let image = UIImage.waveformImage()
         waveformView = UIImageView(image: image)
