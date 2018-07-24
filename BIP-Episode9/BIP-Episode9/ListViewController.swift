@@ -10,76 +10,141 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import Reachability
-import SVProgressHUD
 
 let urlString = "http://universities.hipolabs.com/search?name=technology"
 
-class ListViewController: UITableViewController {
+enum ActivityState {
+    case inactive
+    case loadingLocal
+    case loadingRemote
+}
+
+class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var reachability: Reachability!
-    var universities: [JSON]?
+    var countries: [String]?
+    
+    @IBOutlet weak var tableViewTopSpaceConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityLabel: UILabel!
+    
+    var state: ActivityState = .inactive {
+        didSet {
+            switch state {
+            case .inactive:
+                self.activityIndicator.stopAnimating()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    self.activityLabel.text = ""
+                    UIView.animate(withDuration: 0.50) {
+                        self.tableViewTopSpaceConstraint.constant = 0.0
+                        self.view.layoutIfNeeded()
+                    }
+                }
+            default:
+                self.activityIndicator.startAnimating()
+                self.activityLabel.text = state == .loadingLocal ? "Loading data from cache" : "Downloading data from server"
+                UIView.animate(withDuration: 0.50) {
+                    self.tableViewTopSpaceConstraint.constant = 60.0
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reachability = Reachability()
         
-        if reachability.connection == .none {
-            loadFromLocal()
-        }else{
-            loadFromRemote()
+        loadData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loadData), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+    
+    // MARK: - Private
+    let cacheFileName = "BIP-Episode9-countries-data"
+    
+    @objc private func loadData() {
+        loadFromLocal() // no matter what, always load what's cached
+        if self.reachability.connection != .none {
+            // then if we have a connection, update the cache from the remote server
+            // We added a 2 second delay here because loading from cache happens so quickly
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                self.loadFromRemote()
+            }
         }
     }
     
     private func loadFromRemote(){
-        SVProgressHUD.show(withStatus: "Loading from remote server")
+        self.state = .loadingRemote
         Alamofire.request(urlString).responseData { (data) in
             if let jsonString = data.result.value {
                 let json = JSON(jsonString).arrayValue
                 self.displayJSON(json: json)
+                self.saveToLocal(data: data.data!)
             }
+            self.state = .inactive
         }
     }
     
     private func loadFromLocal() {
-        SVProgressHUD.show(withStatus: "Loading from local cache")
-        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path))
-                let json = JSON(data).arrayValue
-                self.displayJSON(json: json)
-            } catch{
-                print("Error loading data from cache. Handle this in some smart way.")
-            }
-        }else {
-            print("Could not find cached data file")
+        self.state = .loadingLocal
+        do {
+            let cacheDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileURL = cacheDir.appendingPathComponent(cacheFileName)
+            
+            let data = try Data(contentsOf: fileURL)
+            let json = JSON(data).arrayValue
+            self.displayJSON(json: json)
+        }catch{
+            print(error)
+        }
+    }
+    
+    private func saveToLocal(data: Data) {
+        do {
+            let cacheDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
+            let fileURL = cacheDir.appendingPathComponent(cacheFileName)
+            try data.write(to: fileURL)
+            print("Saved \(data.count) to cache")
+        } catch {
+            print(error)
         }
     }
     
     private func displayJSON(json: [JSON]) {
-        self.universities = json
+        self.countries = []
+        json.forEach { (school) in
+            let country = school["country"].stringValue
+            if let countries = self.countries, !countries.contains(country) {
+                self.countries!.append(country)
+            }
+        }
+        self.countries = self.countries!.sorted()
         tableView.reloadData()
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2.0, execute: {
-            SVProgressHUD.dismiss()
-        })
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return countries == nil ? 0 : 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return universities == nil ? 0 : universities!.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.countries!.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let universityJSON = universities![indexPath.row]
-        cell.textLabel?.text = universityJSON["name"].stringValue
-
+        if let countries = self.countries {
+            cell.textLabel?.text = countries[indexPath.row]
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
