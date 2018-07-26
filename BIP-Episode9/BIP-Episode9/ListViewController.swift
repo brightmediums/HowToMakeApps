@@ -58,6 +58,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         loadData()
         
+        // Anytime the app is brought to the foreground, load data accordingly
         NotificationCenter.default.addObserver(self, selector: #selector(loadData), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
