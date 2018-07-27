@@ -66,17 +66,17 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let cacheFileName = "BIP-Episode9-countries-data"
     
     @objc private func loadData() {
-        loadFromLocal() // no matter what, always load what's cached
+        loadFromLocalCache() // no matter what, always load what's cached
         if self.reachability.connection != .none {
             // then if we have a connection, update the cache from the remote server
             // We added a 2 second delay here because loading from cache happens so quickly
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                self.loadFromRemote()
+                self.loadFromRemoteServer()
             }
         }
     }
     
-    private func loadFromRemote(){
+    private func loadFromRemoteServer(){
         self.state = .loadingRemote
         Alamofire.request(urlString).responseData { (data) in
             if let jsonString = data.result.value {
@@ -88,7 +88,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    private func loadFromLocal() {
+    private func loadFromLocalCache() {
         self.state = .loadingLocal
         do {
             let cacheDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
