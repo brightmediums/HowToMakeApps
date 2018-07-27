@@ -82,7 +82,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let jsonString = data.result.value {
                 let json = JSON(jsonString).arrayValue
                 self.displayJSON(json: json)
-                self.saveToLocal(data: data.data!)
+                self.cacheData(data: data.data!)
             }
             self.state = .inactive
         }
@@ -102,7 +102,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    private func saveToLocal(data: Data) {
+    private func cacheData(data: Data) {
         do {
             let cacheDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
             let fileURL = cacheDir.appendingPathComponent(cacheFileName)
