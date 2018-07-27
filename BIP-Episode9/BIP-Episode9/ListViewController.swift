@@ -12,6 +12,7 @@ import Alamofire
 import Reachability
 
 let urlString = "http://universities.hipolabs.com/search?name=technology"
+let cacheFileName = "BIP-Episode9-countries-data"
 
 enum ActivityState {
     case inactive
@@ -63,7 +64,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // MARK: - Private
-    let cacheFileName = "BIP-Episode9-countries-data"
     
     @objc private func loadData() {
         loadFromLocalCache() // no matter what, always load what's cached
@@ -81,7 +81,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         Alamofire.request(urlString).responseData { (data) in
             if let jsonString = data.result.value {
                 let json = JSON(jsonString).arrayValue
-                self.displayJSON(json: json)
+                self.displayData(json: json)
                 self.cacheData(data: data.data!)
             }
             self.state = .inactive
@@ -96,7 +96,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let data = try Data(contentsOf: fileURL)
             let json = JSON(data).arrayValue
-            self.displayJSON(json: json)
+            self.displayData(json: json)
         }catch{
             print(error)
         }
@@ -107,13 +107,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let cacheDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
             let fileURL = cacheDir.appendingPathComponent(cacheFileName)
             try data.write(to: fileURL)
-            print("Saved \(data.count) to cache")
+            print("Saved \(data.count) Bytes to cache")
         } catch {
             print(error)
         }
     }
     
-    private func displayJSON(json: [JSON]) {
+    private func displayData(json: [JSON]) {
         self.countries = []
         json.forEach { (school) in
             let country = school["country"].stringValue
