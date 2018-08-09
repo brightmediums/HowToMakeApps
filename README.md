@@ -11,4 +11,5 @@
 * [Parsing JSON with Cocoapods (CatViewer-2)](https://www.youtube.com/watch?v=ruSCgQIrgOE)
 * [1 Thing iPhone Developers Do That Drives Me Crazy](https://www.youtube.com/watch?v=I6BmmnkImGQ)
 * [iOS Offline Mode FAIL - We Can Do Better](https://www.youtube.com/watch?v=cbN3E8NBBW8)
+* [Animations - One Simple Way to Improve Your Apps](https://www.youtube.com/watch?v=kvsYRY-kn08)
 
