@@ -19,8 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NY_Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-Ga-2PT">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NY_Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-Ga-2PT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taco" translatesAutoresizingMaskIntoConstraints="NO" id="iC7-1F-T3Z" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="100" height="100"/>
@@ -30,7 +31,6 @@
                                     <constraint firstAttribute="height" constant="100" id="g2k-Up-Ceb"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ZnB-tH-Bqe" appends="YES" id="ngR-9g-uhh"/>
                                     <outletCollection property="gestureRecognizers" destination="IBs-Sd-ZuR" appends="YES" id="9V7-2d-eaE"/>
                                 </connections>
                             </imageView>
@@ -42,7 +42,6 @@
                                     <constraint firstAttribute="width" secondItem="5JN-Ck-WNX" secondAttribute="height" multiplier="1:1" id="ndg-Pl-vyt"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Vde-st-uaC" appends="YES" id="gxB-YF-GGs"/>
                                     <outletCollection property="gestureRecognizers" destination="YMt-Bm-ZNd" appends="YES" id="VCm-Hb-1Nl"/>
                                 </connections>
                             </imageView>
@@ -54,7 +53,6 @@
                                     <constraint firstAttribute="height" constant="100" id="amX-MI-B6b"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="GtE-zs-ob3" appends="YES" id="Ohh-Pr-qXj"/>
                                     <outletCollection property="gestureRecognizers" destination="9NS-br-rk8" appends="YES" id="tZz-A6-1OB"/>
                                 </connections>
                             </imageView>
@@ -78,13 +76,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="constraintFlowerHeight" destination="6Q8-jk-4eg" id="8ea-7I-QFV"/>
                         <outlet property="constraintFlowerLeft" destination="Z51-WK-2YB" id="ci1-lY-zh6"/>
                         <outlet property="constraintFlowerTop" destination="bnX-eT-Qag" id="uhr-LA-cgb"/>
-                        <outlet property="constraintMonkeyHeight" destination="amX-MI-B6b" id="Wej-if-0rL"/>
                         <outlet property="constraintMonkeyLeft" destination="YO0-En-62T" id="dH1-or-Th3"/>
                         <outlet property="constraintMonkeyTop" destination="FwY-Ei-M91" id="PdX-nR-ANY"/>
-                        <outlet property="constraintTacoHeight" destination="g2k-Up-Ceb" id="JMv-Zn-a0y"/>
                         <outlet property="constraintTacoLeft" destination="NYe-uF-8go" id="p9S-2Z-Beg"/>
                         <outlet property="constraintTacoTop" destination="02k-sd-e79" id="kiI-1w-8Et"/>
                         <outlet property="stickerFlower" destination="5JN-Ck-WNX" id="1bd-JS-FWj"/>
@@ -93,21 +88,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="GtE-zs-ob3">
-                    <connections>
-                        <action selector="didPinchSticker:" destination="BYZ-38-t0r" id="uJc-ob-jzk"/>
-                    </connections>
-                </pinchGestureRecognizer>
-                <pinchGestureRecognizer id="Vde-st-uaC">
-                    <connections>
-                        <action selector="didPinchSticker:" destination="BYZ-38-t0r" id="XO5-3J-0z9"/>
-                    </connections>
-                </pinchGestureRecognizer>
-                <pinchGestureRecognizer id="ZnB-tH-Bqe">
-                    <connections>
-                        <action selector="didPinchSticker:" destination="BYZ-38-t0r" id="jaT-Ge-eWa"/>
-                    </connections>
-                </pinchGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="IBs-Sd-ZuR">
                     <connections>
                         <action selector="didDragSticker:" destination="BYZ-38-t0r" id="9h7-TQ-pY6"/>
@@ -129,8 +109,8 @@
     </scenes>
     <resources>
         <image name="NY_Skyline" width="1349" height="1012"/>
-        <image name="flower" width="200" height="201"/>
-        <image name="monkey" width="200" height="208"/>
+        <image name="flower" width="200" height="200"/>
+        <image name="monkey" width="200" height="200"/>
         <image name="taco" width="200" height="200"/>
     </resources>
 </document>
