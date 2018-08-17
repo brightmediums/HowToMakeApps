@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHv-8T-pW1" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦁" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="CHv-8T-pW1" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -33,14 +33,14 @@
                                     <outletCollection property="gestureRecognizers" destination="Rlw-SC-5do" appends="YES" id="sAI-7F-pEw"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-Vp-9Vh" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐼" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="1" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-Vp-9Vh" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
                                 <rect key="frame" x="139" y="20" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="7vd-y8-hWg"/>
                                     <constraint firstAttribute="width" secondItem="I9a-Vp-9Vh" secondAttribute="height" multiplier="1:1" id="Gg5-lY-i5M"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1000"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
@@ -48,7 +48,7 @@
                                     <outletCollection property="gestureRecognizers" destination="zlT-Qg-Z8M" appends="YES" id="3df-gB-iYF"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-ro-wfw" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐨" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-ro-wfw" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
                                 <rect key="frame" x="262" y="20" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -111,6 +111,7 @@
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>

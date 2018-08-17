@@ -8,11 +8,15 @@
 
 import UIKit
 
+let maximumScale = CGFloat(1.1)
+let minimumScale = CGFloat(0.9)
+
 class Sticker : UILabel {
     var constraintLeft: NSLayoutConstraint!
     var constraintTop: NSLayoutConstraint!
     var constraintHeight: NSLayoutConstraint!
     var originBeforeDragging: CGPoint!
+    var workingHeight: CGFloat!
 }
 
 class ViewController: UIViewController {
@@ -61,10 +65,14 @@ class ViewController: UIViewController {
         let recognizer = sender as! UIPinchGestureRecognizer
         let sticker = recognizer.view as! Sticker
         
-        let height = sticker.constraintHeight.constant
-        let newHeight = height * recognizer.scale
-        print("scale \(recognizer.scale), height \(height), newHeight \(newHeight)")
-        sticker.constraintHeight.constant = 150
+        if recognizer.state == .began {
+            sticker.workingHeight = sticker.constraintHeight.constant
+        }else if recognizer.state == .changed {
+            let scale = recognizer.scale //> 1.0 ? maximumScale : minimumScale
+            let newHeight = sticker.workingHeight * scale
+            print("scale \(scale), height \(sticker.workingHeight), newHeight \(newHeight)")
+            sticker.constraintHeight.constant = newHeight
+        }
     }
     
     @IBAction func didDragSticker(_ sender: Any) {
