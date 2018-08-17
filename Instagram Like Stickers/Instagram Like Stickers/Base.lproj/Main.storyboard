@@ -19,99 +19,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦁" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="CHv-8T-pW1" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NY_Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-Ga-2PT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taco" translatesAutoresizingMaskIntoConstraints="NO" id="iC7-1F-T3Z" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="LfD-kx-ITE"/>
-                                    <constraint firstAttribute="width" secondItem="CHv-8T-pW1" secondAttribute="height" multiplier="1:1" id="kGl-ij-htf"/>
+                                    <constraint firstAttribute="width" secondItem="iC7-1F-T3Z" secondAttribute="height" multiplier="1:1" id="cg6-3h-VGE"/>
+                                    <constraint firstAttribute="height" constant="100" id="g2k-Up-Ceb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Rlw-SC-5do" appends="YES" id="sAI-7F-pEw"/>
+                                    <outletCollection property="gestureRecognizers" destination="ZnB-tH-Bqe" appends="YES" id="ngR-9g-uhh"/>
+                                    <outletCollection property="gestureRecognizers" destination="IBs-Sd-ZuR" appends="YES" id="9V7-2d-eaE"/>
                                 </connections>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐼" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="1" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-Vp-9Vh" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
-                                <rect key="frame" x="139" y="20" width="100" height="100"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="5JN-Ck-WNX" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
+                                <rect key="frame" x="137" y="26" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="7vd-y8-hWg"/>
-                                    <constraint firstAttribute="width" secondItem="I9a-Vp-9Vh" secondAttribute="height" multiplier="1:1" id="Gg5-lY-i5M"/>
+                                    <constraint firstAttribute="height" constant="100" id="6Q8-jk-4eg"/>
+                                    <constraint firstAttribute="width" secondItem="5JN-Ck-WNX" secondAttribute="height" multiplier="1:1" id="ndg-Pl-vyt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="1000"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="h3X-ja-hPU" appends="YES" id="W82-z0-QK5"/>
-                                    <outletCollection property="gestureRecognizers" destination="zlT-Qg-Z8M" appends="YES" id="3df-gB-iYF"/>
+                                    <outletCollection property="gestureRecognizers" destination="Vde-st-uaC" appends="YES" id="gxB-YF-GGs"/>
+                                    <outletCollection property="gestureRecognizers" destination="YMt-Bm-ZNd" appends="YES" id="VCm-Hb-1Nl"/>
                                 </connections>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐨" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-ro-wfw" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
-                                <rect key="frame" x="262" y="20" width="100" height="100"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-n2-pTE" customClass="Sticker" customModule="Instagram_Like_Stickers" customModuleProvider="target">
+                                <rect key="frame" x="259" y="26" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="B2I-mC-X4d"/>
-                                    <constraint firstAttribute="width" secondItem="cOC-ro-wfw" secondAttribute="height" multiplier="1:1" id="dPb-ge-f4v"/>
+                                    <constraint firstAttribute="width" secondItem="Mdn-n2-pTE" secondAttribute="height" multiplier="1:1" id="HMg-wA-IQT"/>
+                                    <constraint firstAttribute="height" constant="100" id="amX-MI-B6b"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="YYM-c4-aPt" appends="YES" id="uoI-HP-A4p"/>
+                                    <outletCollection property="gestureRecognizers" destination="GtE-zs-ob3" appends="YES" id="Ohh-Pr-qXj"/>
+                                    <outletCollection property="gestureRecognizers" destination="9NS-br-rk8" appends="YES" id="tZz-A6-1OB"/>
                                 </connections>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="I9a-Vp-9Vh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="3B3-bw-VV3"/>
-                            <constraint firstItem="cOC-ro-wfw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="262" id="LVK-m5-zFR"/>
-                            <constraint firstItem="CHv-8T-pW1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P5h-jS-Gbf"/>
-                            <constraint firstItem="CHv-8T-pW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dbc-sP-u6P"/>
-                            <constraint firstItem="cOC-ro-wfw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qeq-0A-sBM"/>
-                            <constraint firstItem="I9a-Vp-9Vh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rLo-AV-vbX"/>
+                            <constraint firstItem="iC7-1F-T3Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="02k-sd-e79"/>
+                            <constraint firstItem="5JN-Ck-WNX" firstAttribute="width" secondItem="5JN-Ck-WNX" secondAttribute="height" multiplier="1:1" id="BsP-nQ-3Xy"/>
+                            <constraint firstItem="Mdn-n2-pTE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="FwY-Ei-M91"/>
+                            <constraint firstItem="fIo-Ga-2PT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LnS-n5-nKo"/>
+                            <constraint firstItem="iC7-1F-T3Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NYe-uF-8go"/>
+                            <constraint firstItem="fIo-Ga-2PT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RWP-0A-h8d"/>
+                            <constraint firstItem="Mdn-n2-pTE" firstAttribute="width" secondItem="Mdn-n2-pTE" secondAttribute="height" multiplier="1:1" id="T55-d6-CWb"/>
+                            <constraint firstItem="Mdn-n2-pTE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="259" id="YO0-En-62T"/>
+                            <constraint firstItem="5JN-Ck-WNX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="Z51-WK-2YB"/>
+                            <constraint firstItem="5JN-Ck-WNX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="bnX-eT-Qag"/>
+                            <constraint firstItem="Mdn-n2-pTE" firstAttribute="width" secondItem="Mdn-n2-pTE" secondAttribute="height" multiplier="1:1" id="i5j-Ch-nuC"/>
+                            <constraint firstItem="fIo-Ga-2PT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sSW-vr-w81"/>
+                            <constraint firstItem="fIo-Ga-2PT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w24-My-Jao"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="constraintKoalaHeight" destination="B2I-mC-X4d" id="kGk-Nh-V1C"/>
-                        <outlet property="constraintKoalaLeft" destination="LVK-m5-zFR" id="0x2-G3-FcK"/>
-                        <outlet property="constraintKoalaTop" destination="qeq-0A-sBM" id="VLt-qA-brv"/>
-                        <outlet property="constraintLionHeight" destination="LfD-kx-ITE" id="fHl-Xu-Cpy"/>
-                        <outlet property="constraintLionLeft" destination="dbc-sP-u6P" id="ZvU-L0-fnU"/>
-                        <outlet property="constraintLionTop" destination="P5h-jS-Gbf" id="wzl-Gz-8Mz"/>
-                        <outlet property="constraintPandaHeight" destination="7vd-y8-hWg" id="t4E-4C-iRI"/>
-                        <outlet property="constraintPandaLeft" destination="3B3-bw-VV3" id="zdr-XJ-CB5"/>
-                        <outlet property="constraintPandaTop" destination="rLo-AV-vbX" id="wMM-fq-TY8"/>
-                        <outlet property="stickerKoala" destination="cOC-ro-wfw" id="Fo7-Zb-kxO"/>
-                        <outlet property="stickerLion" destination="CHv-8T-pW1" id="OQ5-Mj-9X1"/>
-                        <outlet property="stickerPanda" destination="I9a-Vp-9Vh" id="bJc-ok-8ab"/>
+                        <outlet property="constraintFlowerHeight" destination="6Q8-jk-4eg" id="8ea-7I-QFV"/>
+                        <outlet property="constraintFlowerLeft" destination="Z51-WK-2YB" id="ci1-lY-zh6"/>
+                        <outlet property="constraintFlowerTop" destination="bnX-eT-Qag" id="uhr-LA-cgb"/>
+                        <outlet property="constraintMonkeyHeight" destination="amX-MI-B6b" id="Wej-if-0rL"/>
+                        <outlet property="constraintMonkeyLeft" destination="YO0-En-62T" id="dH1-or-Th3"/>
+                        <outlet property="constraintMonkeyTop" destination="FwY-Ei-M91" id="PdX-nR-ANY"/>
+                        <outlet property="constraintTacoHeight" destination="g2k-Up-Ceb" id="JMv-Zn-a0y"/>
+                        <outlet property="constraintTacoLeft" destination="NYe-uF-8go" id="p9S-2Z-Beg"/>
+                        <outlet property="constraintTacoTop" destination="02k-sd-e79" id="kiI-1w-8Et"/>
+                        <outlet property="stickerFlower" destination="5JN-Ck-WNX" id="1bd-JS-FWj"/>
+                        <outlet property="stickerMonkey" destination="Mdn-n2-pTE" id="hdw-m0-j9u"/>
+                        <outlet property="stickerTaco" destination="iC7-1F-T3Z" id="iNc-9Z-TbL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Rlw-SC-5do">
+                <pinchGestureRecognizer id="GtE-zs-ob3">
                     <connections>
-                        <action selector="didDragSticker:" destination="BYZ-38-t0r" id="foN-LK-vJB"/>
-                    </connections>
-                </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="h3X-ja-hPU">
-                    <connections>
-                        <action selector="didDragSticker:" destination="BYZ-38-t0r" id="LaZ-i6-jFr"/>
-                    </connections>
-                </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="YYM-c4-aPt">
-                    <connections>
-                        <action selector="didDragSticker:" destination="BYZ-38-t0r" id="hw3-wq-vZK"/>
-                    </connections>
-                </panGestureRecognizer>
-                <pinchGestureRecognizer id="zlT-Qg-Z8M">
-                    <connections>
-                        <action selector="didPinchSticker:" destination="BYZ-38-t0r" id="fou-Ta-Dor"/>
+                        <action selector="didPinchSticker:" destination="BYZ-38-t0r" id="uJc-ob-jzk"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="Vde-st-uaC">
+                    <connections>
+                        <action selector="didPinchSticker:" destination="BYZ-38-t0r" id="XO5-3J-0z9"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="ZnB-tH-Bqe">
+                    <connections>
+                        <action selector="didPinchSticker:" destination="BYZ-38-t0r" id="jaT-Ge-eWa"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="IBs-Sd-ZuR">
+                    <connections>
+                        <action selector="didDragSticker:" destination="BYZ-38-t0r" id="9h7-TQ-pY6"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="YMt-Bm-ZNd">
+                    <connections>
+                        <action selector="didDragSticker:" destination="BYZ-38-t0r" id="5dH-ha-N18"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9NS-br-rk8">
+                    <connections>
+                        <action selector="didDragSticker:" destination="BYZ-38-t0r" id="BwE-Tp-55P"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NY_Skyline" width="1349" height="1012"/>
+        <image name="flower" width="200" height="201"/>
+        <image name="monkey" width="200" height="208"/>
+        <image name="taco" width="200" height="200"/>
+    </resources>
 </document>
