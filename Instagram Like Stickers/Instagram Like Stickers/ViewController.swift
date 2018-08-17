@@ -8,9 +8,6 @@
 
 import UIKit
 
-let maximumScale = CGFloat(1.1)
-let minimumScale = CGFloat(0.9)
-
 class Sticker : UIImageView {
     var constraintLeft: NSLayoutConstraint!
     var constraintTop: NSLayoutConstraint!
