@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NY_Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="HCe-eW-gPA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="gLI-M2-V8V" customClass="Sticker" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="N6L-ti-VMt"/>
+                                    <constraint firstAttribute="width" constant="100" id="oZf-6t-zbq"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UI2-cj-AZE" appends="YES" id="ybd-CM-11f"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taco" translatesAutoresizingMaskIntoConstraints="NO" id="pct-BQ-9FT" customClass="Sticker" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target">
+                                <rect key="frame" x="137" y="20" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="X5Y-89-GhT"/>
+                                    <constraint firstAttribute="height" constant="100" id="zES-lP-R6C"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="32P-g2-QbW" appends="YES" id="Sv7-KG-WR7"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-WU-efl" customClass="Sticker" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target">
+                                <rect key="frame" x="259" y="20" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fho-kY-4sY"/>
+                                    <constraint firstAttribute="width" constant="100" id="wN7-Pg-qt0"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ezc-Bv-bvE" appends="YES" id="Ar7-mb-InO"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ea-eH-ftl"/>
+                            <constraint firstItem="NnA-WU-efl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Tu-VE-HHj"/>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="I1K-bq-S9V"/>
+                            <constraint firstItem="pct-BQ-9FT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Uz9-38-DTb"/>
+                            <constraint firstItem="gLI-M2-V8V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VrR-r6-6lU"/>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ahK-G2-5Gh"/>
+                            <constraint firstItem="NnA-WU-efl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="259" id="fg2-va-byX"/>
+                            <constraint firstItem="gLI-M2-V8V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oC8-A2-Igx"/>
+                            <constraint firstItem="pct-BQ-9FT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="ods-Av-4lJ"/>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zGf-aE-zha"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="constraintFlowerLeft" destination="fg2-va-byX" id="AEA-r5-rfe"/>
+                        <outlet property="constraintFlowerTop" destination="7Tu-VE-HHj" id="5G3-Z5-vst"/>
+                        <outlet property="constraintMonkeyLeft" destination="VrR-r6-6lU" id="k1G-uQ-dzY"/>
+                        <outlet property="constraintMonkeyTop" destination="oC8-A2-Igx" id="dd9-Tw-peR"/>
+                        <outlet property="constraintTacoLeft" destination="ods-Av-4lJ" id="74z-9W-Da9"/>
+                        <outlet property="constraintTacoTop" destination="Uz9-38-DTb" id="8qd-ST-Kvz"/>
+                        <outlet property="stickerFlower" destination="NnA-WU-efl" id="u03-6s-Bt4"/>
+                        <outlet property="stickerMonkey" destination="gLI-M2-V8V" id="v7Y-Mb-XD0"/>
+                        <outlet property="stickerTaco" destination="pct-BQ-9FT" id="w8j-cG-uDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="UI2-cj-AZE">
+                    <connections>
+                        <action selector="didPanSticker:" destination="BYZ-38-t0r" id="IZr-hq-2YB"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="32P-g2-QbW">
+                    <connections>
+                        <action selector="didPanSticker:" destination="BYZ-38-t0r" id="kDV-a0-DH4"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ezc-Bv-bvE">
+                    <connections>
+                        <action selector="didPanSticker:" destination="BYZ-38-t0r" id="lf0-rR-hks"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NY_Skyline" width="759" height="1012"/>
+        <image name="flower" width="200" height="200"/>
+        <image name="monkey" width="200" height="200"/>
+        <image name="taco" width="200" height="200"/>
+    </resources>
+</document>
