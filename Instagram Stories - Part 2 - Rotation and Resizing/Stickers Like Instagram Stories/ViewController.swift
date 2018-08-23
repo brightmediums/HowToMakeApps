@@ -132,7 +132,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     private func moveSticker(recognizer: UIPanGestureRecognizer){
         if let sticker = self.activeSticker {
             let translation = recognizer.translation(in: self.view)
-            print("moving sticker \(translation)")
             sticker.translation = translation
         }
     }
