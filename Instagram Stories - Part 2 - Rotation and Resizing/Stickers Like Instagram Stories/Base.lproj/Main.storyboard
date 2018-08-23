@@ -22,9 +22,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="X8l-95-ypf" appends="YES" id="AbK-TU-OTo"/>
                                     <outletCollection property="gestureRecognizers" destination="4eu-h8-c8q" appends="YES" id="rhd-g4-3iT"/>
                                     <outletCollection property="gestureRecognizers" destination="NgS-B0-yn1" appends="YES" id="GBT-9v-pVh"/>
+                                    <outletCollection property="gestureRecognizers" destination="uKn-XL-ZBT" appends="YES" id="lFL-n6-AEY"/>
                                 </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="gLI-M2-V8V" customClass="Sticker" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target">
@@ -68,27 +68,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="constraintFlowerLeft" destination="fg2-va-byX" id="AEA-r5-rfe"/>
-                        <outlet property="constraintFlowerTop" destination="7Tu-VE-HHj" id="5G3-Z5-vst"/>
-                        <outlet property="constraintMonkeyLeft" destination="VrR-r6-6lU" id="k1G-uQ-dzY"/>
-                        <outlet property="constraintMonkeyTop" destination="oC8-A2-Igx" id="dd9-Tw-peR"/>
-                        <outlet property="constraintTacoLeft" destination="ods-Av-4lJ" id="74z-9W-Da9"/>
-                        <outlet property="constraintTacoTop" destination="Uz9-38-DTb" id="8qd-ST-Kvz"/>
                         <outlet property="stickerFlower" destination="NnA-WU-efl" id="u03-6s-Bt4"/>
                         <outlet property="stickerMonkey" destination="gLI-M2-V8V" id="v7Y-Mb-XD0"/>
                         <outlet property="stickerTaco" destination="pct-BQ-9FT" id="w8j-cG-uDl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <rotationGestureRecognizer id="X8l-95-ypf">
-                    <connections>
-                        <action selector="didRotateOnStory:" destination="BYZ-38-t0r" id="9Hq-eB-QsY"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="jFe-CJ-wLY"/>
-                    </connections>
-                </rotationGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="4eu-h8-c8q">
                     <connections>
                         <action selector="didPanOnStory:" destination="BYZ-38-t0r" id="elL-Wo-aoh"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="5U7-J5-umn"/>
                     </connections>
                 </panGestureRecognizer>
                 <pinchGestureRecognizer id="NgS-B0-yn1">
@@ -97,6 +86,12 @@
                         <outlet property="delegate" destination="BYZ-38-t0r" id="vzr-xA-nwe"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="uKn-XL-ZBT">
+                    <connections>
+                        <action selector="didRotateOnStory:" destination="BYZ-38-t0r" id="d0V-FA-fAn"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="bWK-VR-5zf"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
