@@ -68,6 +68,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="panGestureRecognizer" destination="4eu-h8-c8q" id="XwG-yB-uPA"/>
+                        <outlet property="pinchGestureRecognizer" destination="NgS-B0-yn1" id="YKq-wZ-ikt"/>
+                        <outlet property="rotationGestureRecognizer" destination="uKn-XL-ZBT" id="eyW-gn-jl0"/>
                         <outlet property="stickerFlower" destination="NnA-WU-efl" id="u03-6s-Bt4"/>
                         <outlet property="stickerMonkey" destination="gLI-M2-V8V" id="v7Y-Mb-XD0"/>
                         <outlet property="stickerTaco" destination="pct-BQ-9FT" id="w8j-cG-uDl"/>
@@ -77,7 +80,7 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="4eu-h8-c8q">
                     <connections>
                         <action selector="didPanOnStory:" destination="BYZ-38-t0r" id="elL-Wo-aoh"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="5U7-J5-umn"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="kLS-L1-kmN"/>
                     </connections>
                 </panGestureRecognizer>
                 <pinchGestureRecognizer id="NgS-B0-yn1">
