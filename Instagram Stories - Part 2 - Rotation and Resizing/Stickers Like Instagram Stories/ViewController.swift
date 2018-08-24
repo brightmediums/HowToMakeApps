@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UIKit.UIGestureRecognizerSubclass
 
 class Sticker: UIImageView {
     var appliedTranslation  = CGPoint(x: 0.0, y: 0.0)
@@ -86,7 +85,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 self.view.bringSubview(toFront: sticker)
             }
         }else if recognizer.state == .changed {
-            self.moveSticker(recognizer: recognizer)
+            if let sticker = self.activeSticker {
+                let translation = recognizer.translation(in: self.view)
+                sticker.translation = translation
+            }
         }else if recognizer.state == .ended {
             if let sticker = self.activeSticker {
                 sticker.saveTranslation()
@@ -129,14 +131,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             if let sticker = self.activeSticker {
                 sticker.saveRotation()
             }
-        }
-    }
-    
-    // MARK: - Private
-    private func moveSticker(recognizer: UIPanGestureRecognizer){
-        if let sticker = self.activeSticker {
-            let translation = recognizer.translation(in: self.view)
-            sticker.translation = translation
         }
     }
     
