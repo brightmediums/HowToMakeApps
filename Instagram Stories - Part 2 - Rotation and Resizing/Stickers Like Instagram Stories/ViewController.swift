@@ -15,23 +15,17 @@ class Sticker: UIImageView {
     
     // Placement: Used to track how much translation has already been applied while the finger remains down
     var translation = CGPoint(x: 0.0, y: 0.0) {
-        didSet {
-            self.updateTransform()
-        }
+        didSet { self.updateTransform() }
     }
     
     // Scale: Used to track how much scaling has already been applied
     var scale = CGFloat(1.0) {
-        didSet {
-            self.updateTransform()
-        }
+        didSet { self.updateTransform() }
     }
     
     // Rotation: Used to track how much rotation is applied while fingers are down
     var rotation = CGFloat(0.0) {
-        didSet {
-            self.updateTransform()
-        }
+        didSet { self.updateTransform() }
     }
     
     func saveScale() {
