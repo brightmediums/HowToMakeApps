@@ -65,14 +65,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var stickerTaco: Sticker!
     @IBOutlet weak var stickerFlower: Sticker!
     
-    @IBOutlet var rotationGestureRecognizer: UIRotationGestureRecognizer!
-    @IBOutlet var pinchGestureRecognizer: UIPinchGestureRecognizer!
-    @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     var activeSticker: Sticker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.panGestureRecognizer.maximumNumberOfTouches = 1
     }
     
     // For placing stickers

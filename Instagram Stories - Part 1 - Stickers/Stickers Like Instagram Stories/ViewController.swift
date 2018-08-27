@@ -19,24 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var stickerTaco: Sticker!
     @IBOutlet weak var stickerFlower: Sticker!
     
-    @IBOutlet weak var constraintMonkeyLeft: NSLayoutConstraint!
-    @IBOutlet weak var constraintMonkeyTop: NSLayoutConstraint!
-    @IBOutlet weak var constraintTacoLeft: NSLayoutConstraint!
-    @IBOutlet weak var constraintTacoTop: NSLayoutConstraint!
-    @IBOutlet weak var constraintFlowerLeft: NSLayoutConstraint!
-    @IBOutlet weak var constraintFlowerTop: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.stickerMonkey.constraintLeft = constraintMonkeyLeft
-        self.stickerMonkey.constraintTop = constraintMonkeyTop
-        
-        self.stickerFlower.constraintLeft = constraintFlowerLeft
-        self.stickerFlower.constraintTop = constraintFlowerTop
-        
-        self.stickerTaco.constraintLeft = constraintTacoLeft
-        self.stickerTaco.constraintTop = constraintTacoTop
     }
 
     // Used to track how much translation has already been accounted for while the finger remains down
