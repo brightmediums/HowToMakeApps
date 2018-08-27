@@ -9,8 +9,15 @@
 import UIKit
 
 class Sticker: UIImageView {
-    var constraintTop: NSLayoutConstraint!
-    var constraintLeft: NSLayoutConstraint!
+   
+    var appliedTranslation = CGPoint(x: 0.0, y: 0.0)
+    
+    var translation = CGPoint(x: 0.0, y: 0.0) {
+        didSet {
+            self.updateTransform()
+        }
+    }
+    
 }
 
 class ViewController: UIViewController {
@@ -23,8 +30,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    // Used to track how much translation has already been accounted for while the finger remains down
-    var adjustedTranslation = CGPoint(x: 0.0, y: 0.0)
     
     @IBAction func didPanSticker(_ sender: Any) {
         let recognizer = sender as! UIPanGestureRecognizer

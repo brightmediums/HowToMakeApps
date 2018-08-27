@@ -16,21 +16,21 @@ class Sticker: UIImageView {
     // Placement: Used to track how much translation has already been applied while the finger remains down
     var translation = CGPoint(x: 0.0, y: 0.0) {
         didSet {
-            self.updateTransforms()
+            self.updateTransform()
         }
     }
     
     // Scale: Used to track how much scaling has already been applied
     var scale = CGFloat(1.0) {
         didSet {
-            self.updateTransforms()
+            self.updateTransform()
         }
     }
     
     // Rotation: Used to track how much rotation is applied while fingers are down
     var rotation = CGFloat(0.0) {
         didSet {
-            self.updateTransforms()
+            self.updateTransform()
         }
     }
     
@@ -50,7 +50,7 @@ class Sticker: UIImageView {
         rotation = CGFloat(0.0)
     }
     
-    private func updateTransforms() {
+    private func updateTransform() {
         let translationTransform    = CGAffineTransform(translationX: self.translation.x + appliedTranslation.x, y: self.translation.y + appliedTranslation.y)
         let scaleTransform          = CGAffineTransform(scaleX: scale * appliedScale, y: scale * appliedScale)
         let rotationTransform       = CGAffineTransform(rotationAngle: rotation + appliedRotation)
