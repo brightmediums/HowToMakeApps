@@ -147,7 +147,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Gesture Recognizer Delegate
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        print("gesture \(gestureRecognizer)")
         return true
     }
 
