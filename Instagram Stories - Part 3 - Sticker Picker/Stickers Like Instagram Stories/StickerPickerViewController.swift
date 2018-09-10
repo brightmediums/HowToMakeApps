@@ -14,7 +14,7 @@ protocol StickerPickerDelegate {
     func didPick(sticker: String)
 }
 
-class StickerCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIGestureRecognizerDelegate {
+class StickerPickerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIGestureRecognizerDelegate {
 
     var emoji:[String]!
     var delegate: StickerPickerDelegate?

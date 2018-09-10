@@ -12,7 +12,7 @@
 		BA0641A52127567E00EBB13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A32127567E00EBB13A /* Main.storyboard */; };
 		BA0641A72127567E00EBB13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A62127567E00EBB13A /* Assets.xcassets */; };
 		BA0641AA2127567E00EBB13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */; };
-		BA54C673213833BA00B81AA1 /* StickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C672213833BA00B81AA1 /* StickerCollectionViewController.swift */; };
+		BA54C673213833BA00B81AA1 /* StickerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C672213833BA00B81AA1 /* StickerPickerViewController.swift */; };
 		BA54C675213835FD00B81AA1 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C674213835FC00B81AA1 /* EmojiCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		BA0641A62127567E00EBB13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA0641A92127567E00EBB13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA0641AB2127567E00EBB13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA54C672213833BA00B81AA1 /* StickerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewController.swift; sourceTree = "<group>"; };
+		BA54C672213833BA00B81AA1 /* StickerPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPickerViewController.swift; sourceTree = "<group>"; };
 		BA54C674213835FC00B81AA1 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +64,7 @@
 				BA0641A62127567E00EBB13A /* Assets.xcassets */,
 				BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */,
 				BA0641AB2127567E00EBB13A /* Info.plist */,
-				BA54C672213833BA00B81AA1 /* StickerCollectionViewController.swift */,
+				BA54C672213833BA00B81AA1 /* StickerPickerViewController.swift */,
 				BA54C674213835FC00B81AA1 /* EmojiCollectionViewCell.swift */,
 			);
 			path = "Stickers Like Instagram Stories";
@@ -143,7 +143,7 @@
 			files = (
 				BA0641A22127567E00EBB13A /* ViewController.swift in Sources */,
 				BA0641A02127567E00EBB13A /* AppDelegate.swift in Sources */,
-				BA54C673213833BA00B81AA1 /* StickerCollectionViewController.swift in Sources */,
+				BA54C673213833BA00B81AA1 /* StickerPickerViewController.swift in Sources */,
 				BA54C675213835FD00B81AA1 /* EmojiCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

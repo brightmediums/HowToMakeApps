@@ -9,7 +9,7 @@
 import UIKit
 
 let defaultStickerWidthAndHeight = CGFloat(54.0)
-let minimumOffsetForEdgePan = CGFloat(100.0)
+let minimumOffsetForSwipe = CGFloat(100.0)
 
 class Sticker: UILabel {
     var appliedTranslation  = CGPoint(x: 0.0, y: 0.0)
@@ -66,16 +66,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
     }
     
     @IBAction func pickSticker(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "StickerPicker") as! StickerCollectionViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "StickerPicker") as! StickerPickerViewController
         vc.delegate = self
       
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }
     
-    // For placing stickers
-    // and exposing sticker panel
-    
+    // For exposing sticker picker
     var waitingToExposeStickerPanel = false
     
     @IBAction func didPanOnStory(_ sender: Any) {
@@ -95,7 +93,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
             }else {
                 if waitingToExposeStickerPanel
                     && (fabs(translation.y) > fabs(translation.x)
-                    && translation.y < (0.0 - minimumOffsetForEdgePan)){
+                    && translation.y < (0.0 - minimumOffsetForSwipe)){
                     self.pickSticker(self)
                     waitingToExposeStickerPanel = false
                 }

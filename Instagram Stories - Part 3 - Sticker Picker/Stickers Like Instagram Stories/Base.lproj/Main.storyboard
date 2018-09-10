@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--Sticker Collection View Controller-->
+        <!--Sticker Picker View Controller-->
         <scene sceneID="DJk-IX-I5A">
             <objects>
-                <viewController storyboardIdentifier="StickerPicker" id="Cle-Yo-f36" customClass="StickerCollectionViewController" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StickerPicker" id="Cle-Yo-f36" customClass="StickerPickerViewController" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yGy-w1-tca">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
