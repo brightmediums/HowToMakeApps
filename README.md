@@ -2,10 +2,6 @@
 1. [Building Instagram Stories - Part 1 - Stickers - and a Rubik's Cube!](https://www.youtube.com/watch?v=EdDNvQiJhlc)
 1. [Building Instagram Stories - Part 2 - Rotating and Scaling - and Contact Juggling!](https://www.youtube.com/watch?v=QaS81gjrlTA)
 
-# App Teardowns (no particular order necessary)
-* [How SoundCloud Made Their Custom Waveform Audio Scrubber](https://www.youtube.com/watch?v=8mB3QyX0h4Q&)
-* [Building SoundCloud for iOS From Scratch](https://www.youtube.com/watch?v=WSMKWYWEujs)
-
 # Beginning iPhone Programming Series (recommended order)
 1. [Intro to How to Make Apps & Beginning iPhone Programming](https://www.youtube.com/watch?v=7Qb-veeWPkY)
 1. [1 Thing iPhone Developers Do That Drives Me Crazy](https://www.youtube.com/watch?v=I6BmmnkImGQ)
@@ -20,4 +16,7 @@
 1. [Parsing JSON with Cocoapods (CatViewer-2)](https://www.youtube.com/watch?v=ruSCgQIrgOE)
 1. [iOS Offline Mode FAIL - We Can Do Better](https://www.youtube.com/watch?v=cbN3E8NBBW8)
 
+# App Teardowns (no particular order necessary)
+* [How SoundCloud Made Their Custom Waveform Audio Scrubber](https://www.youtube.com/watch?v=8mB3QyX0h4Q&)
+* [Building SoundCloud for iOS From Scratch](https://www.youtube.com/watch?v=WSMKWYWEujs)
 
