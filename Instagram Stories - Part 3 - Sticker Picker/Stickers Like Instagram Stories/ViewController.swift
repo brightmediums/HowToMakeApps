@@ -8,8 +8,9 @@
 
 import UIKit
 
-let defaultStickerWidthAndHeight = CGFloat(54.0)
-let minimumOffsetForSwipe = CGFloat(100.0)
+let defaultStickerWidthHeight = CGFloat(54.0)
+let defaultFontSize = CGFloat(38.0)
+let minimumOffsetForSwipeUp = CGFloat(100.0)
 
 class Sticker: UILabel {
     var appliedTranslation  = CGPoint(x: 0.0, y: 0.0)
@@ -65,17 +66,15 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
         super.viewDidLoad()
     }
     
-    @IBAction func pickSticker(_ sender: Any) {
+    @IBAction func openStickerPicker(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "StickerPicker") as! StickerPickerViewController
         vc.delegate = self
-      
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }
     
-    // For exposing sticker picker
-    var waitingToExposeStickerPanel = false
-    
+    var waitingToExposeStickerPicker = false
+    // For placing stickers
     @IBAction func didPanOnStory(_ sender: Any) {
         let recognizer = sender as! UIPanGestureRecognizer
         
@@ -84,25 +83,26 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
             if let sticker = self.activeSticker {
                 self.view.bringSubview(toFront: sticker)
             }else {
-                waitingToExposeStickerPanel = true
+                waitingToExposeStickerPicker = true
             }
         }else if recognizer.state == .changed {
             let translation = recognizer.translation(in: self.view)
             if let sticker = self.activeSticker {
                 sticker.translation = translation
-            }else {
-                if waitingToExposeStickerPanel
-                    && (fabs(translation.y) > fabs(translation.x)
-                    && translation.y < (0.0 - minimumOffsetForSwipe)){
-                    self.pickSticker(self)
-                    waitingToExposeStickerPanel = false
+            }else{
+                if waitingToExposeStickerPicker {
+                    if fabs(translation.y) > fabs(translation.x)
+                        && translation.y < (0.0 - minimumOffsetForSwipeUp) {
+                        self.openStickerPicker(self)
+                        waitingToExposeStickerPicker = false
+                    }
                 }
             }
         }else if recognizer.state == .ended {
             if let sticker = self.activeSticker {
                 sticker.saveTranslation()
             }
-            waitingToExposeStickerPanel = false
+            waitingToExposeStickerPicker = false
         }
     }
     
@@ -125,7 +125,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
         }
     }
     
-    // For rotating stickers
+    // Fo rotating stickers
     @IBAction func didRotateOnStory(_ sender: Any) {
         let recognizer = sender as! UIRotationGestureRecognizer
         
@@ -144,6 +144,21 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
         }
     }
     
+    private func add(stickerText: String){
+        let frame = CGRect(x: 0.0, y: 0.0, width: defaultStickerWidthHeight, height: defaultStickerWidthHeight)
+        let sticker = Sticker(frame: frame)
+        sticker.font = UIFont(name: "Helvetica", size: defaultFontSize)
+        sticker.text = stickerText
+        
+        self.view.addSubview(sticker)
+        
+        sticker.translatesAutoresizingMaskIntoConstraints = false
+        sticker.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        sticker.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        
+        self.allStickers.append(sticker)
+    }
+    
     private func findSticker(point: CGPoint) -> Sticker? {
         var aSticker: Sticker? = nil
         self.allStickers.forEach { (sticker) in
@@ -154,33 +169,17 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
         return aSticker
     }
     
-    private func add(sticker: String) {
-        let frame = CGRect(x: 0.0, y: 0.0, width: defaultStickerWidthAndHeight, height: defaultStickerWidthAndHeight)
-        let stickerLabel = Sticker(frame: frame)
-        stickerLabel.font = UIFont(name: "Helvetica", size: 38.0)
-        stickerLabel.text = sticker
-        
-        // add the view before adding constraints
-        self.view.addSubview(stickerLabel)
-        
-        // add constraints
-        stickerLabel.translatesAutoresizingMaskIntoConstraints = false
-        stickerLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        stickerLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        self.allStickers.append(stickerLabel)
-    }
-    
     // MARK: - Gesture Recognizer Delegate
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
-    // MARK: - Sticker Picker Delegate
+    // MARK: - StickerPickerDelegate
     func didPick(sticker: String) {
         self.dismiss(animated: true, completion: nil)
-        self.add(sticker: sticker)
+        self.add(stickerText: sticker)
     }
+    
 
 }
 

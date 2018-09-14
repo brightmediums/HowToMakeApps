@@ -1,6 +1,7 @@
 # Building Instagram Stories (recommended order)
 1. [Building Instagram Stories - Part 1 - Stickers - and a Rubik's Cube!](https://www.youtube.com/watch?v=EdDNvQiJhlc)
 1. [Building Instagram Stories - Part 2 - Rotating and Scaling - and Contact Juggling!](https://www.youtube.com/watch?v=QaS81gjrlTA)
+1. [Building Instagram Stories - Part 3 - Custom Sticker Picker - and a Juggling Accident!](https://www.youtube.com/watch?v=NbHYLNNQdhg)
 
 # Beginning iPhone Programming Series (recommended order)
 1. [Intro to How to Make Apps & Beginning iPhone Programming](https://www.youtube.com/watch?v=7Qb-veeWPkY)
@@ -19,4 +20,4 @@
 # App Teardowns (no particular order necessary)
 * [How SoundCloud Made Their Custom Waveform Audio Scrubber](https://www.youtube.com/watch?v=8mB3QyX0h4Q&)
 * [Building SoundCloud for iOS From Scratch](https://www.youtube.com/watch?v=WSMKWYWEujs)
-
+* [Building Instagram Stories From Scratch] See Links Above

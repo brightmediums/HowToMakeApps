@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA0641A02127567E00EBB13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06419F2127567E00EBB13A /* AppDelegate.swift */; };
-		BA0641A22127567E00EBB13A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0641A12127567E00EBB13A /* ViewController.swift */; };
-		BA0641A52127567E00EBB13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A32127567E00EBB13A /* Main.storyboard */; };
-		BA0641A72127567E00EBB13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A62127567E00EBB13A /* Assets.xcassets */; };
-		BA0641AA2127567E00EBB13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */; };
-		BAFF7B802146FDD600548A56 /* StickerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF7B7F2146FDD600548A56 /* StickerPickerViewController.swift */; };
-		BAFF7B822146FDEC00548A56 /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF7B812146FDEC00548A56 /* StickerCollectionViewCell.swift */; };
+		BAFB6E2B214ABE9200F1BA46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFB6E2A214ABE9200F1BA46 /* AppDelegate.swift */; };
+		BAFB6E2D214ABE9200F1BA46 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFB6E2C214ABE9200F1BA46 /* FirstViewController.swift */; };
+		BAFB6E2F214ABE9200F1BA46 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFB6E2E214ABE9200F1BA46 /* SecondViewController.swift */; };
+		BAFB6E32214ABE9200F1BA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFB6E30214ABE9200F1BA46 /* Main.storyboard */; };
+		BAFB6E34214ABE9300F1BA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFB6E33214ABE9300F1BA46 /* Assets.xcassets */; };
+		BAFB6E37214ABE9300F1BA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFB6E35214ABE9300F1BA46 /* LaunchScreen.storyboard */; };
+		BAFB6E3F214ABFA400F1BA46 /* OptionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFB6E3E214ABFA400F1BA46 /* OptionPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA06419C2127567E00EBB13A /* Stickers Like Instagram Stories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stickers Like Instagram Stories.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA06419F2127567E00EBB13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA0641A12127567E00EBB13A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BA0641A42127567E00EBB13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BA0641A62127567E00EBB13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA0641A92127567E00EBB13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BA0641AB2127567E00EBB13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAFF7B7F2146FDD600548A56 /* StickerPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPickerViewController.swift; sourceTree = "<group>"; };
-		BAFF7B812146FDEC00548A56 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAFB6E27214ABE9200F1BA46 /* Why You Should Use a Delegate and Protocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Why You Should Use a Delegate and Protocol.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFB6E2A214ABE9200F1BA46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAFB6E2C214ABE9200F1BA46 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		BAFB6E2E214ABE9200F1BA46 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BAFB6E31214ABE9200F1BA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAFB6E33214ABE9300F1BA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAFB6E36214ABE9300F1BA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAFB6E38214ABE9300F1BA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFB6E3E214ABFA400F1BA46 /* OptionPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BA0641992127567E00EBB13A /* Frameworks */ = {
+		BAFB6E24214ABE9200F1BA46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BA0641932127567E00EBB13A = {
+		BAFB6E1E214ABE9200F1BA46 = {
 			isa = PBXGroup;
 			children = (
-				BA06419E2127567E00EBB13A /* Stickers Like Instagram Stories */,
-				BA06419D2127567E00EBB13A /* Products */,
+				BAFB6E29214ABE9200F1BA46 /* Why You Should Use a Delegate and Protocol */,
+				BAFB6E28214ABE9200F1BA46 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BA06419D2127567E00EBB13A /* Products */ = {
+		BAFB6E28214ABE9200F1BA46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA06419C2127567E00EBB13A /* Stickers Like Instagram Stories.app */,
+				BAFB6E27214ABE9200F1BA46 /* Why You Should Use a Delegate and Protocol.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BA06419E2127567E00EBB13A /* Stickers Like Instagram Stories */ = {
+		BAFB6E29214ABE9200F1BA46 /* Why You Should Use a Delegate and Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				BA06419F2127567E00EBB13A /* AppDelegate.swift */,
-				BA0641A12127567E00EBB13A /* ViewController.swift */,
-				BA0641A32127567E00EBB13A /* Main.storyboard */,
-				BA0641A62127567E00EBB13A /* Assets.xcassets */,
-				BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */,
-				BA0641AB2127567E00EBB13A /* Info.plist */,
-				BAFF7B7F2146FDD600548A56 /* StickerPickerViewController.swift */,
-				BAFF7B812146FDEC00548A56 /* StickerCollectionViewCell.swift */,
+				BAFB6E2A214ABE9200F1BA46 /* AppDelegate.swift */,
+				BAFB6E2C214ABE9200F1BA46 /* FirstViewController.swift */,
+				BAFB6E2E214ABE9200F1BA46 /* SecondViewController.swift */,
+				BAFB6E30214ABE9200F1BA46 /* Main.storyboard */,
+				BAFB6E33214ABE9300F1BA46 /* Assets.xcassets */,
+				BAFB6E35214ABE9300F1BA46 /* LaunchScreen.storyboard */,
+				BAFB6E38214ABE9300F1BA46 /* Info.plist */,
+				BAFB6E3E214ABFA400F1BA46 /* OptionPickerViewController.swift */,
 			);
-			path = "Stickers Like Instagram Stories";
+			path = "Why You Should Use a Delegate and Protocol";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA06419B2127567E00EBB13A /* Stickers Like Instagram Stories */ = {
+		BAFB6E26214ABE9200F1BA46 /* Why You Should Use a Delegate and Protocol */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA0641AE2127567E00EBB13A /* Build configuration list for PBXNativeTarget "Stickers Like Instagram Stories" */;
+			buildConfigurationList = BAFB6E3B214ABE9300F1BA46 /* Build configuration list for PBXNativeTarget "Why You Should Use a Delegate and Protocol" */;
 			buildPhases = (
-				BA0641982127567E00EBB13A /* Sources */,
-				BA0641992127567E00EBB13A /* Frameworks */,
-				BA06419A2127567E00EBB13A /* Resources */,
+				BAFB6E23214ABE9200F1BA46 /* Sources */,
+				BAFB6E24214ABE9200F1BA46 /* Frameworks */,
+				BAFB6E25214ABE9200F1BA46 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Stickers Like Instagram Stories";
-			productName = "Stickers Like Instagram Stories";
-			productReference = BA06419C2127567E00EBB13A /* Stickers Like Instagram Stories.app */;
+			name = "Why You Should Use a Delegate and Protocol";
+			productName = "Why You Should Use a Delegate and Protocol";
+			productReference = BAFB6E27214ABE9200F1BA46 /* Why You Should Use a Delegate and Protocol.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BA0641942127567E00EBB13A /* Project object */ = {
+		BAFB6E1F214ABE9200F1BA46 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Bright Mediums";
 				TargetAttributes = {
-					BA06419B2127567E00EBB13A = {
-						CreatedOnToolsVersion = 9.4;
+					BAFB6E26214ABE9200F1BA46 = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = BA0641972127567E00EBB13A /* Build configuration list for PBXProject "Stickers Like Instagram Stories" */;
+			buildConfigurationList = BAFB6E22214ABE9200F1BA46 /* Build configuration list for PBXProject "Why You Should Use a Delegate and Protocol" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = BA0641932127567E00EBB13A;
-			productRefGroup = BA06419D2127567E00EBB13A /* Products */;
+			mainGroup = BAFB6E1E214ABE9200F1BA46;
+			productRefGroup = BAFB6E28214ABE9200F1BA46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA06419B2127567E00EBB13A /* Stickers Like Instagram Stories */,
+				BAFB6E26214ABE9200F1BA46 /* Why You Should Use a Delegate and Protocol */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BA06419A2127567E00EBB13A /* Resources */ = {
+		BAFB6E25214ABE9200F1BA46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA0641AA2127567E00EBB13A /* LaunchScreen.storyboard in Resources */,
-				BA0641A72127567E00EBB13A /* Assets.xcassets in Resources */,
-				BA0641A52127567E00EBB13A /* Main.storyboard in Resources */,
+				BAFB6E37214ABE9300F1BA46 /* LaunchScreen.storyboard in Resources */,
+				BAFB6E34214ABE9300F1BA46 /* Assets.xcassets in Resources */,
+				BAFB6E32214ABE9200F1BA46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BA0641982127567E00EBB13A /* Sources */ = {
+		BAFB6E23214ABE9200F1BA46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA0641A22127567E00EBB13A /* ViewController.swift in Sources */,
-				BA0641A02127567E00EBB13A /* AppDelegate.swift in Sources */,
-				BAFF7B822146FDEC00548A56 /* StickerCollectionViewCell.swift in Sources */,
-				BAFF7B802146FDD600548A56 /* StickerPickerViewController.swift in Sources */,
+				BAFB6E2F214ABE9200F1BA46 /* SecondViewController.swift in Sources */,
+				BAFB6E2B214ABE9200F1BA46 /* AppDelegate.swift in Sources */,
+				BAFB6E3F214ABFA400F1BA46 /* OptionPickerViewController.swift in Sources */,
+				BAFB6E2D214ABE9200F1BA46 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BA0641A32127567E00EBB13A /* Main.storyboard */ = {
+		BAFB6E30214ABE9200F1BA46 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BA0641A42127567E00EBB13A /* Base */,
+				BAFB6E31214ABE9200F1BA46 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */ = {
+		BAFB6E35214ABE9300F1BA46 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BA0641A92127567E00EBB13A /* Base */,
+				BAFB6E36214ABE9300F1BA46 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BA0641AC2127567E00EBB13A /* Debug */ = {
+		BAFB6E39214ABE9300F1BA46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		BA0641AD2127567E00EBB13A /* Release */ = {
+		BAFB6E3A214ABE9300F1BA46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,36 +284,36 @@
 			};
 			name = Release;
 		};
-		BA0641AF2127567E00EBB13A /* Debug */ = {
+		BAFB6E3C214ABE9300F1BA46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVR9HX5Y9T;
-				INFOPLIST_FILE = "Stickers Like Instagram Stories/Info.plist";
+				INFOPLIST_FILE = "Why You Should Use a Delegate and Protocol/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightmediums.Stickers-Like-Instagram-Stories";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightmediums.Why-You-Should-Use-a-Delegate-and-Protocol";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		BA0641B02127567E00EBB13A /* Release */ = {
+		BAFB6E3D214ABE9300F1BA46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVR9HX5Y9T;
-				INFOPLIST_FILE = "Stickers Like Instagram Stories/Info.plist";
+				INFOPLIST_FILE = "Why You Should Use a Delegate and Protocol/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightmediums.Stickers-Like-Instagram-Stories";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightmediums.Why-You-Should-Use-a-Delegate-and-Protocol";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,25 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA0641972127567E00EBB13A /* Build configuration list for PBXProject "Stickers Like Instagram Stories" */ = {
+		BAFB6E22214ABE9200F1BA46 /* Build configuration list for PBXProject "Why You Should Use a Delegate and Protocol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BA0641AC2127567E00EBB13A /* Debug */,
-				BA0641AD2127567E00EBB13A /* Release */,
+				BAFB6E39214ABE9300F1BA46 /* Debug */,
+				BAFB6E3A214ABE9300F1BA46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA0641AE2127567E00EBB13A /* Build configuration list for PBXNativeTarget "Stickers Like Instagram Stories" */ = {
+		BAFB6E3B214ABE9300F1BA46 /* Build configuration list for PBXNativeTarget "Why You Should Use a Delegate and Protocol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BA0641AF2127567E00EBB13A /* Debug */,
-				BA0641B02127567E00EBB13A /* Release */,
+				BAFB6E3C214ABE9300F1BA46 /* Debug */,
+				BAFB6E3D214ABE9300F1BA46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BA0641942127567E00EBB13A /* Project object */;
+	rootObject = BAFB6E1F214ABE9200F1BA46 /* Project object */;
 }
