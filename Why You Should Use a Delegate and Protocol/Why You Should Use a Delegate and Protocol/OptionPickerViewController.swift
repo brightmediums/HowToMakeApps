@@ -8,9 +8,13 @@
 
 import UIKit
 
+protocol OptionPickerDelegate {
+    func didSelectOption(option: String)
+}
+
 class OptionPickerViewController: UIViewController {
 
-    var firstViewController: FirstViewController?
+    var delegate: OptionPickerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +25,11 @@ class OptionPickerViewController: UIViewController {
     }
     
     @IBAction func tapOptionA(_ sender: Any) {
-        self.firstViewController?.selectedOption(option: "A")
+        self.delegate?.didSelectOption(option: "A")
     }
     
     @IBAction func tapOptionB(_ sender: Any) {
-        self.firstViewController?.selectedOption(option: "B")
+        self.delegate?.didSelectOption(option: "B")
     }
    
 }

@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class FirstViewController: UIViewController, OptionPickerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -17,11 +17,12 @@ class FirstViewController: UIViewController {
 
     @IBAction func selectOptions(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OptionPicker") as! OptionPickerViewController
-        vc.firstViewController = self
+        vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
     
-    func selectedOption(option: String){
+    // MARK: - OptionPickerDelegate
+    func didSelectOption(option: String) {
         self.dismiss(animated: true, completion: nil)
         print("User selected option \(option)")
     }
