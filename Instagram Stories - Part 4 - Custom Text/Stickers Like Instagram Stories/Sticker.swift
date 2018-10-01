@@ -23,6 +23,7 @@ class Sticker: UIView {
             if let label = label {
                 label.text = text
                 label.font = defaultLabelFont
+                label.textColor = UIColor.white
                 label.isUserInteractionEnabled = false
                 self.addSubview(label)
             }
@@ -58,6 +59,16 @@ class Sticker: UIView {
     func saveRotation() {
         self.appliedRotation = rotation
         rotation = CGFloat(0.0)
+    }
+    
+    func getTextSize() {
+//        if let string = NSString(string: text?) {
+//            string.bound
+//        }
+        
+        label?.adjustsFontSizeToFitWidth = true
+//        label?.adjustsFontForContentSizeCategory = true
+        
     }
     
     private func updateTransform() {
