@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA0641A02127567E00EBB13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06419F2127567E00EBB13A /* AppDelegate.swift */; };
+		BA0641A22127567E00EBB13A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0641A12127567E00EBB13A /* ViewController.swift */; };
+		BA0641A52127567E00EBB13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A32127567E00EBB13A /* Main.storyboard */; };
+		BA0641A72127567E00EBB13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A62127567E00EBB13A /* Assets.xcassets */; };
+		BA0641AA2127567E00EBB13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */; };
+		BA7F74102162495F00B38E4C /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F740F2162495F00B38E4C /* Sticker.swift */; };
+		BA7F741221625EDF00B38E4C /* TextEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F741121625EDF00B38E4C /* TextEntryViewController.swift */; };
+		BAFF7B802146FDD600548A56 /* StickerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF7B7F2146FDD600548A56 /* StickerPickerViewController.swift */; };
+		BAFF7B822146FDEC00548A56 /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF7B812146FDEC00548A56 /* StickerCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA06419C2127567E00EBB13A /* Stickers Like Instagram Stories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stickers Like Instagram Stories.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA06419F2127567E00EBB13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA0641A12127567E00EBB13A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA0641A42127567E00EBB13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA0641A62127567E00EBB13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA0641A92127567E00EBB13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA0641AB2127567E00EBB13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA7F740F2162495F00B38E4C /* Sticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		BA7F741121625EDF00B38E4C /* TextEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryViewController.swift; sourceTree = "<group>"; };
+		BAFF7B7F2146FDD600548A56 /* StickerPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPickerViewController.swift; sourceTree = "<group>"; };
+		BAFF7B812146FDEC00548A56 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA0641992127567E00EBB13A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA0641932127567E00EBB13A = {
+			isa = PBXGroup;
+			children = (
+				BA06419E2127567E00EBB13A /* Stickers Like Instagram Stories */,
+				BA06419D2127567E00EBB13A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA06419D2127567E00EBB13A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA06419C2127567E00EBB13A /* Stickers Like Instagram Stories.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA06419E2127567E00EBB13A /* Stickers Like Instagram Stories */ = {
+			isa = PBXGroup;
+			children = (
+				BA06419F2127567E00EBB13A /* AppDelegate.swift */,
+				BA0641A12127567E00EBB13A /* ViewController.swift */,
+				BA0641A32127567E00EBB13A /* Main.storyboard */,
+				BA0641A62127567E00EBB13A /* Assets.xcassets */,
+				BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */,
+				BA0641AB2127567E00EBB13A /* Info.plist */,
+				BAFF7B7F2146FDD600548A56 /* StickerPickerViewController.swift */,
+				BAFF7B812146FDEC00548A56 /* StickerCollectionViewCell.swift */,
+				BA7F740F2162495F00B38E4C /* Sticker.swift */,
+				BA7F741121625EDF00B38E4C /* TextEntryViewController.swift */,
+			);
+			path = "Stickers Like Instagram Stories";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA06419B2127567E00EBB13A /* Stickers Like Instagram Stories */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA0641AE2127567E00EBB13A /* Build configuration list for PBXNativeTarget "Stickers Like Instagram Stories" */;
+			buildPhases = (
+				BA0641982127567E00EBB13A /* Sources */,
+				BA0641992127567E00EBB13A /* Frameworks */,
+				BA06419A2127567E00EBB13A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stickers Like Instagram Stories";
+			productName = "Stickers Like Instagram Stories";
+			productReference = BA06419C2127567E00EBB13A /* Stickers Like Instagram Stories.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA0641942127567E00EBB13A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Bright Mediums";
+				TargetAttributes = {
+					BA06419B2127567E00EBB13A = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = BA0641972127567E00EBB13A /* Build configuration list for PBXProject "Stickers Like Instagram Stories" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA0641932127567E00EBB13A;
+			productRefGroup = BA06419D2127567E00EBB13A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA06419B2127567E00EBB13A /* Stickers Like Instagram Stories */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA06419A2127567E00EBB13A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0641AA2127567E00EBB13A /* LaunchScreen.storyboard in Resources */,
+				BA0641A72127567E00EBB13A /* Assets.xcassets in Resources */,
+				BA0641A52127567E00EBB13A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA0641982127567E00EBB13A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0641A22127567E00EBB13A /* ViewController.swift in Sources */,
+				BA0641A02127567E00EBB13A /* AppDelegate.swift in Sources */,
+				BA7F741221625EDF00B38E4C /* TextEntryViewController.swift in Sources */,
+				BAFF7B822146FDEC00548A56 /* StickerCollectionViewCell.swift in Sources */,
+				BAFF7B802146FDD600548A56 /* StickerPickerViewController.swift in Sources */,
+				BA7F74102162495F00B38E4C /* Sticker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BA0641A32127567E00EBB13A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA0641A42127567E00EBB13A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA0641A82127567E00EBB13A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA0641A92127567E00EBB13A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA0641AC2127567E00EBB13A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA0641AD2127567E00EBB13A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA0641AF2127567E00EBB13A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PVR9HX5Y9T;
+				INFOPLIST_FILE = "Stickers Like Instagram Stories/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightmediums.Stickers-Like-Instagram-Stories";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA0641B02127567E00EBB13A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PVR9HX5Y9T;
+				INFOPLIST_FILE = "Stickers Like Instagram Stories/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightmediums.Stickers-Like-Instagram-Stories";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA0641972127567E00EBB13A /* Build configuration list for PBXProject "Stickers Like Instagram Stories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA0641AC2127567E00EBB13A /* Debug */,
+				BA0641AD2127567E00EBB13A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA0641AE2127567E00EBB13A /* Build configuration list for PBXNativeTarget "Stickers Like Instagram Stories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA0641AF2127567E00EBB13A /* Debug */,
+				BA0641B02127567E00EBB13A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA0641942127567E00EBB13A /* Project object */;
+}

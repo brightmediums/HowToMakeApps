@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NY_Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="HCe-eW-gPA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4eu-h8-c8q" appends="YES" id="rhd-g4-3iT"/>
+                                    <outletCollection property="gestureRecognizers" destination="NgS-B0-yn1" appends="YES" id="GBT-9v-pVh"/>
+                                    <outletCollection property="gestureRecognizers" destination="uKn-XL-ZBT" appends="YES" id="lFL-n6-AEY"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTF-ik-tW9">
+                                <rect key="frame" x="315" y="30" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="i4L-1L-Yze"/>
+                                    <constraint firstAttribute="height" constant="40" id="vAP-sZ-gOw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Aa"/>
+                                <connections>
+                                    <action selector="openTextEditor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1AJ-MJ-805"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kl-SH-c47">
+                                <rect key="frame" x="267" y="30" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="JgZ-bz-31E"/>
+                                    <constraint firstAttribute="height" constant="40" id="ulq-FY-uRC"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="baseline_add_circle_outline_white_36pt"/>
+                                <connections>
+                                    <action selector="openStickerPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tuc-PT-B6z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ea-eH-ftl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DTF-ik-tW9" secondAttribute="trailing" constant="20" id="BMq-WY-0O7"/>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="I1K-bq-S9V"/>
+                            <constraint firstItem="DTF-ik-tW9" firstAttribute="leading" secondItem="4kl-SH-c47" secondAttribute="trailing" constant="8" id="LlI-VI-1eC"/>
+                            <constraint firstItem="DTF-ik-tW9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ygk-LT-lVf"/>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ahK-G2-5Gh"/>
+                            <constraint firstItem="4kl-SH-c47" firstAttribute="top" secondItem="DTF-ik-tW9" secondAttribute="top" id="tKJ-aV-dhg"/>
+                            <constraint firstItem="HCe-eW-gPA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zGf-aE-zha"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="4eu-h8-c8q">
+                    <connections>
+                        <action selector="didPanOnStory:" destination="BYZ-38-t0r" id="elL-Wo-aoh"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="kLS-L1-kmN"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="NgS-B0-yn1">
+                    <connections>
+                        <action selector="didPinchOnStory:" destination="BYZ-38-t0r" id="TiN-3G-eGY"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="vzr-xA-nwe"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="uKn-XL-ZBT">
+                    <connections>
+                        <action selector="didRotateOnStory:" destination="BYZ-38-t0r" id="d0V-FA-fAn"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="bWK-VR-5zf"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Sticker Picker View Controller-->
+        <scene sceneID="T5Y-OG-YgU">
+            <objects>
+                <viewController storyboardIdentifier="StickerPicker" id="YsR-JP-OHi" customClass="StickerPickerViewController" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="beP-5B-a6a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gA0-oI-1ze">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Yy-ia-2ke">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StickerCell" id="Rb4-Qg-GKS" customClass="StickerCollectionViewCell" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOl-Ls-6wT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="JOl-Ls-6wT" secondAttribute="bottom" id="AMt-Qt-vJC"/>
+                                            <constraint firstAttribute="trailing" secondItem="JOl-Ls-6wT" secondAttribute="trailing" id="AgJ-gL-79d"/>
+                                            <constraint firstItem="JOl-Ls-6wT" firstAttribute="leading" secondItem="Rb4-Qg-GKS" secondAttribute="leading" id="fHZ-Ze-UVL"/>
+                                            <constraint firstItem="JOl-Ls-6wT" firstAttribute="top" secondItem="Rb4-Qg-GKS" secondAttribute="top" id="pAG-Hb-nm1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="JOl-Ls-6wT" id="NcM-FR-4cO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="YsR-JP-OHi" id="ETC-jq-cJf"/>
+                                    <outlet property="delegate" destination="YsR-JP-OHi" id="E2G-mj-SR3"/>
+                                    <outletCollection property="gestureRecognizers" destination="3tr-X4-4Z6" appends="YES" id="aTW-Se-3gI"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bx-9R-K4k">
+                                <rect key="frame" x="0.0" y="20" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="QXE-6T-Pi5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="YsR-JP-OHi" eventType="touchUpInside" id="wUR-OR-guk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gA0-oI-1ze" firstAttribute="leading" secondItem="QXg-xv-TTa" secondAttribute="leading" id="Eni-tj-745"/>
+                            <constraint firstItem="QXg-xv-TTa" firstAttribute="bottom" secondItem="gA0-oI-1ze" secondAttribute="bottom" id="Exw-EB-EzV"/>
+                            <constraint firstItem="gA0-oI-1ze" firstAttribute="top" secondItem="7bx-9R-K4k" secondAttribute="bottom" id="FeC-ZH-0L3"/>
+                            <constraint firstItem="QXg-xv-TTa" firstAttribute="trailing" secondItem="7bx-9R-K4k" secondAttribute="trailing" id="UKe-Oj-Sm4"/>
+                            <constraint firstItem="7bx-9R-K4k" firstAttribute="top" secondItem="QXg-xv-TTa" secondAttribute="top" id="iG3-h9-eB3"/>
+                            <constraint firstItem="7bx-9R-K4k" firstAttribute="leading" secondItem="QXg-xv-TTa" secondAttribute="leading" id="scf-id-Cje"/>
+                            <constraint firstItem="QXg-xv-TTa" firstAttribute="trailing" secondItem="gA0-oI-1ze" secondAttribute="trailing" id="u33-uz-HYh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QXg-xv-TTa"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="gA0-oI-1ze" id="shY-ap-KBi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEn-1H-E0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3tr-X4-4Z6">
+                    <connections>
+                        <action selector="didPan:" destination="YsR-JP-OHi" id="fgl-vM-Sxq"/>
+                        <outlet property="delegate" destination="YsR-JP-OHi" id="W0E-bC-g1d"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="895" y="134"/>
+        </scene>
+        <!--Text Entry View Controller-->
+        <scene sceneID="K0v-dt-AI7">
+            <objects>
+                <viewController storyboardIdentifier="TextEntry" id="njg-7E-Hxo" customClass="TextEntryViewController" customModule="Stickers_Like_Instagram_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Vy-8F-gSn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0X-oa-bfp">
+                                <rect key="frame" x="20" y="120" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Po-o4-8gS"/>
+                                </constraints>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-w6-Btq">
+                                <rect key="frame" x="310" y="20" width="45" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectDone:" destination="njg-7E-Hxo" eventType="touchUpInside" id="A0g-Ym-9ft"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.69761344178082196" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NW7-w6-Btq" firstAttribute="top" secondItem="euC-n2-HuT" secondAttribute="top" id="4rF-65-rPv"/>
+                            <constraint firstItem="B0X-oa-bfp" firstAttribute="leading" secondItem="euC-n2-HuT" secondAttribute="leading" constant="20" id="HSm-UL-nGC"/>
+                            <constraint firstItem="euC-n2-HuT" firstAttribute="trailing" secondItem="NW7-w6-Btq" secondAttribute="trailing" constant="20" id="arl-7f-g0a"/>
+                            <constraint firstItem="B0X-oa-bfp" firstAttribute="top" secondItem="euC-n2-HuT" secondAttribute="top" constant="100" id="hcM-Z6-t7p"/>
+                            <constraint firstItem="euC-n2-HuT" firstAttribute="trailing" secondItem="B0X-oa-bfp" secondAttribute="trailing" constant="20" id="k05-ov-syC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="euC-n2-HuT"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="B0X-oa-bfp" id="RB0-e4-MOP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eKU-jb-hAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1582" y="132"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NY_Skyline" width="759" height="1012"/>
+        <image name="baseline_add_circle_outline_white_36pt" width="36" height="36"/>
+    </resources>
+</document>
