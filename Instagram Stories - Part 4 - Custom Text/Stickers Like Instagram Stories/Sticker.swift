@@ -61,14 +61,13 @@ class Sticker: UIView {
         rotation = CGFloat(0.0)
     }
     
-    func getTextSize() {
-//        if let string = NSString(string: text?) {
-//            string.bound
-//        }
-        
-        label?.adjustsFontSizeToFitWidth = true
-//        label?.adjustsFontForContentSizeCategory = true
-        
+    override var intrinsicContentSize: CGSize {
+        get {
+            label?.adjustsFontSizeToFitWidth = true
+            label?.minimumScaleFactor = 1
+            label?.sizeToFit()
+            return label!.frame.size
+        }
     }
     
     private func updateTransform() {

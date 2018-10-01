@@ -111,14 +111,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, StickerPick
         let sticker = Sticker(frame: frame)
         sticker.isUserInteractionEnabled = false
         sticker.text = stickerText
-        sticker.getTextSize()
         self.view.addSubview(sticker)
         
         sticker.translatesAutoresizingMaskIntoConstraints = false
         sticker.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         sticker.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        sticker.widthAnchor.constraint(equalToConstant: defaultStickerWidthHeight).isActive = true
-        sticker.heightAnchor.constraint(equalToConstant: defaultStickerWidthHeight).isActive = true
+
         self.allStickers.append(sticker)
     }
     
